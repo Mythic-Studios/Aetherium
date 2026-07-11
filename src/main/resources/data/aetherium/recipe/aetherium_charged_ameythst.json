@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "aetherium",
+  "category": "misc",
+  "pattern": [
+    "dad",
+    "aea",
+    "dad"
+  ],
+  "key": {
+    "d": [
+      "aetherium:aetherium_dust"
+    ],
+    "a": [
+      "minecraft:amethyst_shard"
+    ],
+    "e": [
+      "minecraft:emerald"
+    ]
+  },
+  "result": {
+    "id": "aetherium:aetherium_charged_amethyst"
+  }
+}

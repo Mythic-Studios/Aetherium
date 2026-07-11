@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "aetherium",
+	"version": "${version}",
+	"name": "Aetherium",
+	"description": "A currency that can be made from items & blocks to create different items or blocks",
+	"authors": [
+		"Mythic Goose Studios \n Mars Myth - Lead Developer"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/aetherium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.mythic_goose.aetherium.Aetherium"
+		],
+		"client": [
+			"org.mythic_goose.aetherium.AetheriumClient"
+		],
+		"fabric-datagen": [
+			"org.mythic_goose.aetherium.AetheriumDataGenerator"
+		]
+	},
+	"mixins": [
+		"aetherium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"accessWidener": "aetherium.accesswidener"
+}

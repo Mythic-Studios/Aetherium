@@ -1,0 +1,15 @@
+{
+  "block.aetherium.aetherium_block": "Aetherium Block",
+  "block.aetherium.arcane_station": "Arcane Station",
+  "container.aetherium.arcane_station": "Arcane Station",
+  "container.aetherium.exchange_currency": "Exchange Currency",
+  "item.aetherium.aetherium_charged_amethyst": "Aetherium Charged Amethyst",
+  "item.aetherium.aetherium_crystal": "Aetherium Crystal",
+  "item.aetherium.aetherium_dust": "Aetherium Dust",
+  "item.aetherium.aetherium_ingot": "Aetherium Ingot",
+  "item.aetherium.tome_of_arcana": "Tome of Arcana",
+  "itemGroup.aetherium_tab": "Aetherium",
+  "itemGroup.aetherium_tab.crystals": "Crystalized Currency",
+  "itemGroup.aetherium_tab.main_stuff": "Core",
+  "tooltip.arcana_tome": "§6Learn Everything Possible"
+}

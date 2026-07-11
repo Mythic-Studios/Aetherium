@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "package": "org.mythic_goose.aetherium.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ContainerMixin",
+    "CreativeModeTabMixin",
+    "DataComponentsMixin",
+    "ItemStackMixin",
+    "accessor.CreativeModeTabAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "CreativeModeInventoryScreenMixin",
+    "ItemPickerMenuMixin",
+    "accessor.CreativeModeInventoryScreenAccessor"
+	]
+}
