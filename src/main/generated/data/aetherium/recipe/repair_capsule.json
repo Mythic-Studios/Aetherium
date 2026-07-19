@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "capsule",
+  "key": {
+    "a": "aetherium:capsule_fragment",
+    "n": "minecraft:netherite_ingot"
+  },
+  "pattern": [
+    "na"
+  ],
+  "result": {
+    "id": "aetherium:empty_capsule"
+  }
+}

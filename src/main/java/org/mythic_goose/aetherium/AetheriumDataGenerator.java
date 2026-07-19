@@ -2,8 +2,7 @@ package org.mythic_goose.aetherium;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import org.mythic_goose.aetherium.datagen.ModLanguageProvider;
-import org.mythic_goose.aetherium.datagen.ModModelProvider;
+import org.mythic_goose.aetherium.datagen.*;
 
 public class AetheriumDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -12,6 +11,10 @@ public class AetheriumDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(ModLanguageProvider::new);
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModBlockTagsProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 
 	}
 }

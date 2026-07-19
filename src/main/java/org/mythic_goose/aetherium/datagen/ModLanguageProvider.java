@@ -25,7 +25,17 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TOME_OF_ARCANA, "Tome of Arcana");
         translationBuilder.add("tooltip.arcana_tome", "§6Learn Everything Possible");
 
+        translationBuilder.add(ModItems.COMPRESSED_VOIDMASS, "Compressed Voidmass");
+        translationBuilder.add(ModItems.VOIDMASS_UPGRADE_TEMPLATE, "Voidmass Upgrade Template");
+        translationBuilder.add(ModItems.VOIDMASS_AXE, "Compressed Voidmass Axe");
+        translationBuilder.add(ModItems.VOIDMASS_PICKAXE, "Compressed Voidmass Pickaxe");
+        translationBuilder.add(ModItems.VOIDMASS_SWORD, "Compressed Voidmass Sword");
+        translationBuilder.add(ModItems.VOIDMASS_SHOVEL, "Compressed Voidmass Shovel");
+        translationBuilder.add(ModItems.VOIDMASS_HOE, "Compressed Voidmass Hoe");
+        translationBuilder.add(ModItems.VOIDMASS_SPEAR, "Compressed Voidmass Spear");
+
         translationBuilder.add(ModBlocks.AETHERIUM_BLOCK, "Aetherium Block");
+        translationBuilder.add(ModBlocks.VOIDMASS_BLOCK, "Compressed Voidmass Block");
 
         translationBuilder.add(ModBlocks.ARCANE_STATION, "Arcane Station");
         translationBuilder.add("container.aetherium.arcane_station", "Arcane Station");
@@ -33,6 +43,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add("itemGroup.aetherium_tab.main_stuff", "Core");
         translationBuilder.add("itemGroup.aetherium_tab.crystals", "Crystalized Currency");
+        translationBuilder.add("itemGroup.aetherium_tab.new_items", "NEW!");
         translationBuilder.add("itemGroup.aetherium_tab", "Aetherium");
+
+        translationBuilder.add("item.aetherium.capsule.charge", "Charge: %s / %s");
+
+        translationBuilder.add(ModItems.EMPTY_CAPSULE, "Empty Capsule");
+        translationBuilder.add(ModItems.CAPSULE_FRAGMENT, "Capsule Fragment");
+        translationBuilder.add(ModItems.FULL_CAPSULE_VOIDMASS, "Filled Capsule (Voidmass)");
     }
 }

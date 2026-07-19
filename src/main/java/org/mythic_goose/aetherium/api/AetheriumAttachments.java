@@ -19,20 +19,20 @@ public class AetheriumAttachments {
                     builder -> builder
                             .initializer(() -> BigInteger.ZERO)
                             .persistent(Codec.STRING.xmap(BigInteger::new, BigInteger::toString))
+                            .copyOnDeath()
                             .syncWith(
                                     ByteBufCodecs.STRING_UTF8.map(BigInteger::new, BigInteger::toString),
                                     AttachmentSyncPredicate.targetOnly()
                             )
             );
 
-    // Ordered list of item-id strings the player has "learnt" at the Arcane Station.
-    // Order = learn order, which is also the order shown in the station's browse grid.
     public static final AttachmentType<List<String>> AETH_KNOWN_ITEMS =
             AttachmentRegistry.create(
                     Identifier.fromNamespaceAndPath(Aetherium.MOD_ID, "aeth_known_items"),
                     builder -> builder
                             .initializer(ArrayList::new)
                             .persistent(Codec.STRING.listOf())
+                            .copyOnDeath()
                             .syncWith(
                                     ByteBufCodecs.collection(ArrayList::new, ByteBufCodecs.STRING_UTF8),
                                     AttachmentSyncPredicate.targetOnly()

@@ -2,9 +2,11 @@ package org.mythic_goose.aetherium;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.resources.Identifier;
 import org.mythic_goose.aetherium.api.AethCommands;
 import org.mythic_goose.aetherium.api.AethConfigLoader;
 import org.mythic_goose.aetherium.api.AetheriumAttachments;
+import org.mythic_goose.aetherium.component.ModDataComponents;
 import org.mythic_goose.aetherium.creative_tab.ModCreativeTabs;
 import org.mythic_goose.aetherium.init.ModBlockEntities;
 import org.mythic_goose.aetherium.init.ModBlocks;
@@ -25,6 +27,7 @@ public class Aetherium implements ModInitializer {
 		ModItems.init();
 		ModBlockEntities.register();
 
+		ModDataComponents.init();
 		AetheriumAttachments.register();
 		AethCommands.register();
 		AethValuesInit.register();
@@ -33,5 +36,9 @@ public class Aetherium implements ModInitializer {
 		ModMenuTypes.registerModMenuTypes();
 
 		ModCreativeTabs.init();
+	}
+
+	public static Identifier id(String path) {
+		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}
 }

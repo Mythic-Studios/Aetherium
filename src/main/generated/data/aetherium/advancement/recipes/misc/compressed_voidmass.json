@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aetherium:compressed_voidmass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_voidmass_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:voidmass_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_voidmass_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aetherium:compressed_voidmass"
+    ]
+  }
+}

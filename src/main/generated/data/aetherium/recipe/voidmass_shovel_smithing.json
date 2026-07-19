@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_shovel",
+  "result": {
+    "id": "aetherium:voidmass_shovel"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

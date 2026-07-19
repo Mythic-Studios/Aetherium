@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_hoe",
+  "result": {
+    "id": "aetherium:voidmass_hoe"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

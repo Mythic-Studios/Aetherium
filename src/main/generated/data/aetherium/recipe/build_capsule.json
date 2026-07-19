@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "capsule",
+  "key": {
+    "a": "aetherium:aetherium_charged_amethyst",
+    "g": "minecraft:glass",
+    "n": "minecraft:netherite_ingot"
+  },
+  "pattern": [
+    "ngn",
+    "gag",
+    "ngn"
+  ],
+  "result": {
+    "id": "aetherium:empty_capsule"
+  }
+}

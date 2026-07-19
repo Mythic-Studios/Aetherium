@@ -1,5 +1,7 @@
 package org.mythic_goose.aetherium.init;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -13,6 +15,7 @@ public class ModBlocks extends BlockRegistry {
     public static Block ARCANE_STATION;
 
     public static Block AETHERIUM_BLOCK;
+    public static Block VOIDMASS_BLOCK;
 
     public static void init() {
 
@@ -20,6 +23,13 @@ public class ModBlocks extends BlockRegistry {
                 .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 1200.0F).lightLevel((_) -> 7)));
 
         AETHERIUM_BLOCK = register("aetherium_block", properties -> new Block(properties.mapColor(MapColor.COLOR_BLACK)
-                .requiresCorrectToolForDrops().strength(50.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+                .requiresCorrectToolForDrops().strength(2.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+
+        VOIDMASS_BLOCK = register("voidmass_block", properties -> new Block(properties.mapColor(MapColor.COLOR_BLACK)
+                .requiresCorrectToolForDrops().strength(2.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+    }
+
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }
 }

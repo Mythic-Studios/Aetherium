@@ -4,6 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.ColorCollection;
 import net.minecraft.world.level.block.WeatheringCopperCollection;
 import org.mythic_goose.aetherium.api.Aeth;
 
@@ -31,6 +32,15 @@ public class AethValues {
      * as a WeatheringCopperCollection rather than a single Item.
      */
     public static void set(WeatheringCopperCollection<Item> items, Aeth value) {
+        items.forEach(item -> ITEM_VALUES.put(item, value));
+    }
+
+    /**
+     * Registers every item wool type including the dyed alternatives. That comes
+     * as a ColorCollection rather than a single Item. Yeah, I might need to add a multiplier for dyed versions with the
+     * additions of dye but I really don't care at this moment
+     */
+    public static void set(ColorCollection<Item> items, Aeth value) {
         items.forEach(item -> ITEM_VALUES.put(item, value));
     }
 

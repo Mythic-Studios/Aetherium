@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_spear",
+  "result": {
+    "id": "aetherium:voidmass_spear"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}
