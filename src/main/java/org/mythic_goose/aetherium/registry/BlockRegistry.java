@@ -19,13 +19,13 @@ import java.util.function.Function;
  *
  * <p>Extend this class, declare your blocks as static fields, then call
  * init() in your {@code onInitialize()} to trigger class-loading
- * and register them all.
+ * and registerClock them all.
  *
  * <h2>Quick start</h2>
  * <pre>{@code
  * public class MyBlocksRegistary extends BlockRegistary {
  *
- *     public static final Block RUBY_ORE = register(
+ *     public static final Block RUBY_ORE = registerClock(
  *         "ruby_ore",
  *         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))
  *     );
@@ -69,7 +69,7 @@ public abstract class BlockRegistry {
 
     /**
      * All blocks registered through this helper, in registration order.
-     * Useful for iterating blocks to register block items in bulk.
+     * Useful for iterating blocks to registerClock block items in bulk.
      */
     public static List<Block> all() {
         return Collections.unmodifiableList(REGISTERED);

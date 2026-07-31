@@ -10,7 +10,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
-import org.mythic_goose.aetherium.api.Aeth;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

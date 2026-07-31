@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "aetherium:voidmass"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "aetherium:voidmass"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "aetherium:voidmass"
+      }
+    ]
+  }
+}

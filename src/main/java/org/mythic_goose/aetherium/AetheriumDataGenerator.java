@@ -9,12 +9,13 @@ public class AetheriumDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		pack.addProvider(ModLanguageProvider::new);
-		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModItemTagProvider::new);
-		pack.addProvider(ModBlockTagsProvider::new);
-		pack.addProvider(ModBlockLootTableProvider::new);
-		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(AetheriumLanguageProvider::new);
+		pack.addProvider(AetheriumModelProvider::new);
+		pack.addProvider(AetheriumItemTagProvider::new);
+		pack.addProvider(AetheriumBlockTagProvider::new);
+		pack.addProvider(AetheriumBlockLootTableProvider::new);
+		pack.addProvider(AetheriumRecipeProvider::new);
+		pack.addProvider(AetheriumEquipmentAssetProvider::new);
 
 	}
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_chestplate",
+  "result": {
+    "id": "aetherium:voidmass_chestplate"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

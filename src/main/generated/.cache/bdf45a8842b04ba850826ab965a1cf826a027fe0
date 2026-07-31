@@ -6,7 +6,15 @@ daee0e3b76b257c6424aeb3fde885a2bff6b4320 data/aetherium/tags/item/repairs_voidma
 2d0b70a73d21ed2a2e58a27546b5277c057e880e data/aetherium/tags/item/smooth_stone_items.json
 726d0d30c9dd28cdd65d6c297b8df7299784506e data/aetherium/tags/item/stones_slabs_items.json
 2478604b7ce872662f36efb2ff8925801fa7cffe data/minecraft/tags/item/axes.json
+593a9f670adc082a8edda62813c66f79778cd115 data/minecraft/tags/item/chest_armor.json
+593a9f670adc082a8edda62813c66f79778cd115 data/minecraft/tags/item/enchantable/chest_armor.json
+5a2a97abe386457413e020881362f0f0b568d72e data/minecraft/tags/item/enchantable/foot_armor.json
+b7b84e39ca189f0dc8cb8f0849eea6bc313dcf31 data/minecraft/tags/item/enchantable/head_armor.json
+923b65aaae667069bb6f4251d52983357e03a7f4 data/minecraft/tags/item/enchantable/leg_armor.json
+5a2a97abe386457413e020881362f0f0b568d72e data/minecraft/tags/item/foot_armor.json
+b7b84e39ca189f0dc8cb8f0849eea6bc313dcf31 data/minecraft/tags/item/head_armor.json
 6ec5752cd2cb8bd97acf8a35c6562314fecfc756 data/minecraft/tags/item/hoes.json
+923b65aaae667069bb6f4251d52983357e03a7f4 data/minecraft/tags/item/leg_armor.json
 9499c7095ab5dcc1f99e1e31998462f95f82ab60 data/minecraft/tags/item/pickaxes.json
 c0a55fda890716d317d100cb864d70415c864cd0 data/minecraft/tags/item/shovels.json
 a2ebbe2428d42ca8a9dc87fbbbf249f9cb869de1 data/minecraft/tags/item/spears.json

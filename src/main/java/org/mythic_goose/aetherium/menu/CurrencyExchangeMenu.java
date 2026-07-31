@@ -15,7 +15,7 @@ import org.mythic_goose.aetherium.api.Aeth;
 import org.mythic_goose.aetherium.api.AethHelper;
 import org.mythic_goose.aetherium.api.AethValues;
 import org.mythic_goose.aetherium.block.entity.ArcaneStationBlockEntity;
-import org.mythic_goose.aetherium.init.ModMenuTypes;
+import org.mythic_goose.aetherium.init.AetheriumMenuTypes;
 
 import java.util.List;
 
@@ -72,7 +72,7 @@ public class CurrencyExchangeMenu extends AbstractContainerMenu {
     }
 
     public CurrencyExchangeMenu(int pContainerId, Inventory inv, BlockPos stationPos, ContainerData data) {
-        super(ModMenuTypes.CURRENCY_EXCHANGE_MENU_TYPE, pContainerId);
+        super(AetheriumMenuTypes.CURRENCY_EXCHANGE_MENU_TYPE, pContainerId);
         this.player = inv.player;
         this.stationPos = stationPos;
         this.data = data;

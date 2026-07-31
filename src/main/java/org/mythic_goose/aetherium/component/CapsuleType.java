@@ -3,12 +3,12 @@ package org.mythic_goose.aetherium.component;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.mythic_goose.aetherium.init.ModItems;
+import org.mythic_goose.aetherium.init.AetheriumItems;
 
 import java.util.function.Supplier;
 
 public enum CapsuleType {
-    VOIDMASS("voidmass", () -> ModItems.FULL_CAPSULE_VOIDMASS, () -> ModItems.COMPRESSED_VOIDMASS, 2, 6);
+    VOIDMASS("voidmass", () -> AetheriumItems.FULL_CAPSULE_VOIDMASS, () -> AetheriumItems.COMPRESSED_VOIDMASS, 2, 6);
 
     private final String id;
     private final Supplier<Item> fullCapsuleItem;

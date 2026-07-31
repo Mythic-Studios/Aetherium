@@ -14,14 +14,13 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import org.mythic_goose.aetherium.Aetherium;
 import org.mythic_goose.aetherium.api.Aeth;
 import org.mythic_goose.aetherium.api.AethHelper;
 import org.mythic_goose.aetherium.api.AethKnowledge;
 import org.mythic_goose.aetherium.api.AethValues;
 import org.mythic_goose.aetherium.block.entity.ArcaneStationBlockEntity;
-import org.mythic_goose.aetherium.init.ModItems;
-import org.mythic_goose.aetherium.init.ModMenuTypes;
+import org.mythic_goose.aetherium.init.AetheriumItems;
+import org.mythic_goose.aetherium.init.AetheriumMenuTypes;
 
 import java.util.List;
 
@@ -59,7 +58,7 @@ public class ArcaneStationMenu extends AbstractContainerMenu {
     }
 
     public ArcaneStationMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.ARCANE_STATION_MENU_TYPE, pContainerId);
+        super(AetheriumMenuTypes.ARCANE_STATION_MENU_TYPE, pContainerId);
         blockEntity = ((ArcaneStationBlockEntity) entity);
         this.inventory = blockEntity;
         this.player = inv.player;
@@ -359,7 +358,7 @@ public class ArcaneStationMenu extends AbstractContainerMenu {
         }
         if (totalCount == 0) return;
 
-        if (item == ModItems.TOME_OF_ARCANA) {
+        if (item == AetheriumItems.TOME_OF_ARCANA) {
             for (Item learnable : AethValues.getAllLearnableItems()) {
                 AethKnowledge.learn(player, learnable); // no-op if already known
             }
@@ -437,7 +436,7 @@ public class ArcaneStationMenu extends AbstractContainerMenu {
         Aeth unitValue = AethValues.lookup(stack);
         if (unitValue == null) return; // shouldn't happen (canPlaceItem already filters), but be safe
 
-        if (stack.getItem() == ModItems.TOME_OF_ARCANA) {
+        if (stack.getItem() == AetheriumItems.TOME_OF_ARCANA) {
             for (Item learnable : AethValues.getAllLearnableItems()) {
                 AethKnowledge.learn(player, learnable); // no-op if already known, per your javadoc
             }
@@ -459,7 +458,7 @@ public class ArcaneStationMenu extends AbstractContainerMenu {
         if (AethValues.isExcluded(stack)) return; // not processed — canPlaceItem should already block this
         if (AethValues.lookup(stack) == null) return;
 
-        if (stack.getItem() == ModItems.TOME_OF_ARCANA) {
+        if (stack.getItem() == AetheriumItems.TOME_OF_ARCANA) {
             for (Item learnable : AethValues.getAllLearnableItems()) {
                 AethKnowledge.learn(player, learnable); // no-op if already known, per your javadoc
             }

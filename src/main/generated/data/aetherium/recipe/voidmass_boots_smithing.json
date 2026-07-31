@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_boots",
+  "result": {
+    "id": "aetherium:voidmass_boots"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

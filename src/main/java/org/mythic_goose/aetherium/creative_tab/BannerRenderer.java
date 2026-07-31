@@ -5,7 +5,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
-import org.mythic_goose.aetherium.init.ModSections;
+import org.mythic_goose.aetherium.init.AetheriumTabSections;
 import org.mythic_goose.aetherium.mixin.accessor.CreativeModeInventoryScreenAccessor;
 
 public class BannerRenderer {
@@ -27,7 +27,7 @@ public class BannerRenderer {
 
         Font font = Minecraft.getInstance().font;
 
-        for (Section section : ModSections.ALL) {
+        for (Section section : AetheriumTabSections.ALL) {
             Integer sectionRow = TabLayout.SECTION_ROW.get(section.id());
             if (sectionRow == null) continue;
 

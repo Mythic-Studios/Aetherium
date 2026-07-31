@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "aetherium:item/clock_of_matter_frost"
+  }
+}

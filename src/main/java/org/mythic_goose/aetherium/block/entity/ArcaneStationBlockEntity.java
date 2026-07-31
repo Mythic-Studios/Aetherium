@@ -15,7 +15,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.NotNull;
 import org.jspecify.annotations.NonNull;
-import org.mythic_goose.aetherium.init.ModBlockEntities;
+import org.mythic_goose.aetherium.init.AetheriumBlockEntities;
 import org.mythic_goose.aetherium.api.AethValues;
 import org.mythic_goose.aetherium.menu.ArcaneStationMenu;
 
@@ -30,7 +30,7 @@ public class ArcaneStationBlockEntity extends BaseContainerBlockEntity
     private NonNullList<ItemStack> items = NonNullList.withSize(CONTAINER_SIZE, ItemStack.EMPTY);
 
     public ArcaneStationBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.ARCANE_STATION_BE, pos, state);
+        super(AetheriumBlockEntities.ARCANE_STATION_BE, pos, state);
     }
 
     // ── Container ─────────────────────────────────────────────────────────

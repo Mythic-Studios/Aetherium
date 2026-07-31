@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_helmet",
+  "result": {
+    "id": "aetherium:voidmass_helmet"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

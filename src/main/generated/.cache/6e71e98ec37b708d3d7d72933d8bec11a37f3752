@@ -1,4 +1,5 @@
 // 26.2	-999999999-01-01T00:00:00	Aetherium/Block Loot Tables
 5d51cd297a1f1d5ac6f42af72da6611800edfbfe data/aetherium/loot_table/blocks/aetherium_block.json
 8766187ccca17b4ed02695f5937a034931890265 data/aetherium/loot_table/blocks/arcane_station.json
+f5af881ab6d8384b8a1345a0895c2e7465c3246f data/aetherium/loot_table/blocks/void_berry_bush.json
 aa821e814c7ec3ba1a26581372944537af47f1ad data/aetherium/loot_table/blocks/voidmass_block.json

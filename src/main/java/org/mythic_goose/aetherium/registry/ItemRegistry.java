@@ -14,13 +14,13 @@ import java.util.function.Function;
  *
  * <p>Extend this class, declare your items as static fields, then call
  * registerItems() in your {@code onInitialize()} to trigger class-loading
- * and register them all.
+ * and registerClock them all.
  *
  * <h2>Quick start — standalone item</h2>
  * <pre>{@code
  * public class MyItemsRegistary extends ItemRegistry {
  *
- *     public static final Item RUBY = register(
+ *     public static final Item RUBY = registerClock(
  *         "my_mod", "ruby",
  *         () -> new Item(new Item.Properties())
  *     );
@@ -41,7 +41,7 @@ import java.util.function.Function;
  * <h2>Keeping blocks and items in sync</h2>
  * <p>A common pattern is to declare both in the same class:
  * <pre>{@code
- * public static final Block RUBY_ORE      = BlockRegistary.register(...);
+ * public static final Block RUBY_ORE      = BlockRegistary.registerClock(...);
  * public static final Item  RUBY_ORE_ITEM = registerBlockItem("my_mod", "ruby_ore", RUBY_ORE);
  * }</pre>
  */

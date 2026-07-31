@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:netherite_leggings",
+  "result": {
+    "id": "aetherium:voidmass_leggings"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

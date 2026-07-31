@@ -15,9 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.mythic_goose.aetherium.component.CapsuleType;
 import org.mythic_goose.aetherium.component.ModDataComponents;
-import org.mythic_goose.aetherium.init.ModItems;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class CapsuleItem extends Item {

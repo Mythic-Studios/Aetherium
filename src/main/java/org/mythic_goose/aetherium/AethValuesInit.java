@@ -3,9 +3,8 @@ package org.mythic_goose.aetherium;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import org.mythic_goose.aetherium.api.Aeth;
-import org.mythic_goose.aetherium.api.AethValues;
-import org.mythic_goose.aetherium.init.ModItems;
+import org.mythic_goose.aetherium.api.*;
+import org.mythic_goose.aetherium.init.AetheriumItems;
 import org.mythic_goose.aetherium.util.AetheriumItemTags;
 
 public class AethValuesInit {
@@ -28,6 +27,23 @@ public class AethValuesInit {
         AethValues.set(Items.CLAY, Aeth.ofDecimalString("0.018"));
         AethValues.set(Items.CLAY_BALL, Aeth.ofDecimalString("0.018").divide(4));
         AethValues.set(Items.HONEYCOMB, naturalBase.multiply(18));
+        AethValues.set(Items.CARVED_PUMPKIN, naturalBase.multiply(36));
+        AethValues.set(Items.PUMPKIN, naturalBase.multiply(36));
+
+        AethValues.set(Items.APPLE, naturalBase.add(Aeth.ofDecimalString("0.005")));
+        AethValues.set(Items.SWEET_BERRIES, naturalBase.add(Aeth.ofDecimalString("0.005")));
+        AethValues.set(Items.GLOW_BERRIES, naturalBase.add(Aeth.ofDecimalString("0.005")));
+        AethValues.set(Items.CHORUS_FRUIT, naturalBase.add(Aeth.ofDecimalString("0.005")).multiply(16));
+
+        long growthMultiplier = 6;
+        AethValues.set(Items.WHEAT, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
+        AethValues.set(Items.BREAD, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier).multiply(3));
+        AethValues.set(Items.HAY_BLOCK, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier).multiply(9));
+        AethValues.set(Items.BEETROOT, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
+        AethValues.set(Items.MELON, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
+        AethValues.set(Items.MELON_SLICE, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier).divide(4));
+        AethValues.set(Items.CARROT, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
+        AethValues.set(Items.POTATO, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
 
         AethValues.set(Items.CANDLE, Aeth.ofDecimalString("0.055").add(naturalBase.multiply(18)));
         AethValues.set(Items.DYED_CANDLE, Aeth.ofDecimalString("0.055").add(naturalBase.multiply(18)).add(naturalBase.add(Aeth.ofDecimalString("0.008").multiply(2))));
@@ -43,6 +59,7 @@ public class AethValuesInit {
         AethValues.setTag(ConventionalItemTags.STONES, rockBase.add(Aeth.ofDecimalString("0.005")));
         AethValues.setTag(ConventionalItemTags.COBBLESTONES, rockBase);
         AethValues.setTag(ConventionalItemTags.NETHERRACKS, rockBase);
+        AethValues.set(Items.END_STONE, rockBase);
         AethValues.set(Items.SULFUR, rockBase);
         AethValues.set(Items.CINNABAR, rockBase);
         AethValues.set(Items.BLACKSTONE, rockBase);
@@ -64,8 +81,12 @@ public class AethValuesInit {
         AethValues.set(Items.CARPET, animalBaseline.multiply(2).multiply(2).divide(3));
         AethValues.set(Items.BEEF, animalBaseline.add(animalRawMeatAditional));
         AethValues.set(Items.MUTTON, animalBaseline.add(animalRawMeatAditional));
+        AethValues.set(Items.PORKCHOP, animalBaseline.add(animalRawMeatAditional));
+        AethValues.set(Items.RABBIT, animalBaseline.add(animalRawMeatAditional));
         AethValues.set(Items.CHICKEN, animalBaseline.add(animalRawMeatAditional));
         AethValues.set(Items.COD, animalBaseline.divide(2));
+        AethValues.set(Items.TROPICAL_FISH, animalBaseline.divide(2));
+        AethValues.set(Items.PUFFERFISH, animalBaseline.divide(2));
         AethValues.set(Items.SALMON, animalBaseline.divide(2));
 
         AethValues.set(Items.LEATHER_HELMET, animalBaseline.multiply(2).createHelmet());
@@ -79,6 +100,14 @@ public class AethValuesInit {
         AethValues.set(Items.STRING, overworldMonsterBaseline);
         AethValues.set(Items.RESIN_CLUMP, Aeth.ofDecimalString("0.111"));
 
+        Aeth netherMonsterBaseline = Aeth.ofDecimalString("0.070");
+        AethValues.set(Items.BLAZE_ROD, netherMonsterBaseline.add(Aeth.ofDecimalString("0.027")));
+
+        Aeth endMonsterBaseline = Aeth.ofDecimalString("0.125");
+        AethValues.set(Items.ENDER_PEARL, endMonsterBaseline.add(Aeth.ofDecimalString("0.024")));
+
+        AethValues.set(Items.BLAZE_POWDER, netherMonsterBaseline.add(Aeth.ofDecimalString("0.027")).divide(2));
+        AethValues.set(Items.ENDER_EYE, endMonsterBaseline.add(Aeth.ofDecimalString("0.024")).add(netherMonsterBaseline.add(Aeth.ofDecimalString("0.027")).divide(2)));
 
         Aeth glass = Aeth.ofDecimalString("0.005");
         AethValues.setTag(ConventionalItemTags.GLASS_BLOCKS, glass);
@@ -91,6 +120,8 @@ public class AethValuesInit {
         Aeth fenceGate = plankBase.multiply(4);
         AethValues.setTag(ItemTags.LOGS, logBase);
         AethValues.setTag(ItemTags.PLANKS, plankBase);
+        AethValues.set(Items.BOWL, plankBase.multiply(3).divide(4));
+        AethValues.set(Items.CHEST, plankBase.multiply(8));
         AethValues.set(Items.STICK, plankBase.divide(2));
         AethValues.set(Items.LEVER, plankBase.divide(2).add(rockBase));
         AethValues.setTag(ItemTags.WOODEN_SLABS, plankBase.divide(2));
@@ -109,6 +140,7 @@ public class AethValuesInit {
         AethValues.set(Items.BAMBOO_MOSAIC_STAIRS, woodStairsDoorPartical.divide(4));
 
         AethValues.set(Items.BED, plankBase.multiply(3).add(animalBaseline.multiply(2).multiply(3)));
+        AethValues.set(Items.BANNER, plankBase.divide(2).add(animalBaseline.multiply(2).multiply(6)));
 
         // Wood Tools
         AethValues.set(Items.WOODEN_PICKAXE, plankBase.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2)));
@@ -129,8 +161,10 @@ public class AethValuesInit {
         // Coal & Smelting
 
         Aeth coalBase = Aeth.ofDecimalString("2.500");
+        long cookingFoodMultiplier = 3;
         long cookingMeatMultiplier = 8;
         long cookingMeatMultiplierBeef = 16;
+        AethValues.set(Items.BAKED_POTATO, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier).multiply(cookingFoodMultiplier));
         AethValues.set(Items.CHARCOAL, coalBase.divide(3));
         AethValues.set(Items.COAL, coalBase);
         AethValues.set(Items.TORCH, coalBase.add(plankBase.divide(2)).divide(4));
@@ -154,6 +188,8 @@ public class AethValuesInit {
         AethValues.set(Items.COOKED_BEEF, animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplierBeef));
         AethValues.set(Items.COOKED_CHICKEN, animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplier));
         AethValues.set(Items.COOKED_MUTTON, animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplier));
+        AethValues.set(Items.COOKED_RABBIT, animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplier));
+        AethValues.set(Items.COOKED_PORKCHOP, animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplier));
         AethValues.set(Items.COOKED_COD, animalBaseline.divide(2).multiply(cookingMeatMultiplier));
         AethValues.set(Items.COOKED_SALMON, animalBaseline.divide(2).multiply(cookingMeatMultiplier));
 
@@ -172,6 +208,13 @@ public class AethValuesInit {
         AethValues.set(Items.COPPER_NUGGET, goldCopperBase.divide(9));
         AethValues.set(Items.COPPER_TORCH, coalBase.add(plankBase.divide(2)).add(goldCopperBase.divide(9)).divide(4));
         AethValues.set(Items.GOLD_NUGGET, goldCopperBase.divide(9));
+
+        AethValues.set(Items.GOLDEN_DANDELION, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.003").multiply(2))));
+        AethValues.set(Items.GOLDEN_CARROT, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier)));
+        AethValues.set(Items.GLISTERING_MELON_SLICE, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier)));
+        AethValues.set(Items.GOLDEN_APPLE, naturalBase.add(Aeth.ofDecimalString("0.005")).add(goldCopperBase.multiply(8)));
+        AethValues.set(Items.ENCHANTED_GOLDEN_APPLE, naturalBase.add(Aeth.ofDecimalString("0.005")).add(goldCopperBase.multiply(9).multiply(8)));
+
         // Armour
         AethValues.set(Items.COPPER_HELMET, goldCopperBase.createHelmet());
         AethValues.set(Items.COPPER_CHESTPLATE, goldCopperBase.createChestplate());
@@ -189,6 +232,15 @@ public class AethValuesInit {
         AethValues.set(Items.CUT_COPPER, goldCopperBase.createOreBlocks());
         AethValues.set(Items.CUT_COPPER_SLAB, goldCopperBase.createOreBlocks().divide(2));
         AethValues.set(Items.CHISELED_COPPER, goldCopperBase.createOreBlocks());
+        AethValues.set(Items.COPPER_GRATE, goldCopperBase.createOreBlocks());
+        AethValues.set(Items.COPPER_BARS, goldCopperBase.multiply(6).divide(16));
+        AethValues.set(Items.COPPER_DOOR, goldCopperBase.multiply(6).divide(3));
+        AethValues.set(Items.COPPER_TRAPDOOR, goldCopperBase.multiply(4));
+        AethValues.set(Items.COPPER_CHAIN, goldCopperBase.add(goldCopperBase.divide(9)).add(goldCopperBase.divide(9)));
+        AethValues.set(Items.COPPER_CHAIN, goldCopperBase.divide(9).multiply(8).add(coalBase.add(plankBase.divide(2)).add(goldCopperBase.divide(9)).divide(4)));
+        AethValues.set(Items.COPPER_CHEST, goldCopperBase.multiply(9).add(plankBase.multiply(8)));
+        AethValues.set(Items.COPPER_GOLEM_STATUE, goldCopperBase.multiply(9).add(plankBase.multiply(8)).add(naturalBase.multiply(36)));
+        AethValues.set(Items.COPPER_BULB, goldCopperBase.createOreBlocks().multiply(3).add(netherMonsterBaseline.add(Aeth.ofDecimalString("0.027"))).add(redstoneBase));
         // Copper Other
         AethValues.set(Items.COPPER_PICKAXE, goldCopperBase.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2)));
         AethValues.set(Items.COPPER_AXE, goldCopperBase.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2)));
@@ -304,33 +356,40 @@ public class AethValuesInit {
         AethValues.set(Items.DRAGON_EGG, Aeth.ofDecimalString("15750.578"));
 
         // Custom Items
-        AethValues.set(ModItems.AETHERIUM_CHARGED_AMETHYST, Aeth.ofDecimalString("106.004"));
-        AethValues.set(ModItems.TOME_OF_ARCANA, Aeth.ofDecimalString("4500000000000000000"));
+        AethValues.set(AetheriumItems.AETHERIUM_CHARGED_AMETHYST, Aeth.ofDecimalString("106.004"));
+        AethValues.set(AetheriumItems.TOME_OF_ARCANA, Aeth.ofDecimalString("4500000000000000000")); // 4.5 qt
 
-        AethValues.set(ModItems.ARCANE_STATION, Aeth.ofDecimalString("755.692"));
+        AethValues.set(AetheriumItems.ARCANE_STATION, Aeth.ofDecimalString("755.692"));
 
-        AethValues.set(ModItems.EMPTY_CAPSULE, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8").multiply(4)));
-        AethValues.set(ModItems.CAPSULE_FRAGMENT, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8")));
+        AethValues.set(AetheriumItems.EMPTY_CAPSULE, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8").multiply(4)));
+        AethValues.set(AetheriumItems.CAPSULE_FRAGMENT, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8")));
 
         Aeth voidmassBase = Aeth.ofDecimalString("1250.568");
-        AethValues.set(ModItems.COMPRESSED_VOIDMASS, voidmassBase);
-        AethValues.set(ModItems.VOIDMASS_BLOCK, voidmassBase.multiply(9));
-        AethValues.set(ModItems.VOIDMASS_UPGRADE_TEMPLATE, voidmassBase.multiply(7).add(gems.multiply(2)));
+        AethValues.set(AetheriumItems.COMPRESSED_VOIDMASS, voidmassBase);
+        AethValues.set(AetheriumItems.VOIDMASS_BLOCK, voidmassBase.multiply(9));
+        AethValues.set(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, voidmassBase.multiply(7).add(gems.multiply(2)));
 
-        AethValues.set(ModItems.VOIDMASS_AXE, gems.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
-        AethValues.set(ModItems.VOIDMASS_PICKAXE, gems.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
-        AethValues.set(ModItems.VOIDMASS_SHOVEL, gems.multiply(1).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
-        AethValues.set(ModItems.VOIDMASS_SPEAR, gems.multiply(1).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
-        AethValues.set(ModItems.VOIDMASS_HOE, gems.multiply(2).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
-        AethValues.set(ModItems.VOIDMASS_SWORD, gems.multiply(2).add(plankBase.divide(2)).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+        AethValues.set(AetheriumItems.VOID_BERRY, voidmassBase.divide(2).subtract(Aeth.ofDecimalString("326")));
 
-        AethValues.exclude(ModItems.AETHERIUM_DUST);
-        AethValues.set(ModItems.AETHERIUM_DUST, Aeth.ofDecimalString("0.001"));
-        AethValues.set(ModItems.AETHERIUM_CRYSTAL, Aeth.ofUnits(1));
-        AethValues.exclude(ModItems.AETHERIUM_CRYSTAL);
-        AethValues.set(ModItems.AETHERIUM_INGOT, Aeth.ofUnits(1000));
-        AethValues.exclude(ModItems.AETHERIUM_INGOT);
-        AethValues.set(ModItems.AETHERIUM_BLOCK, Aeth.ofUnits(1000000)); // 1 million
-        AethValues.exclude(ModItems.AETHERIUM_BLOCK);
+        AethValues.set(AetheriumItems.VOIDMASS_HELMET, gems.createHelmet().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+        AethValues.set(AetheriumItems.VOIDMASS_CHESTPLATE, gems.createChestplate().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+        AethValues.set(AetheriumItems.VOIDMASS_LEGGINGS, gems.createLeggings().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+        AethValues.set(AetheriumItems.VOIDMASS_BOOTS, gems.createBoots().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+
+        AethValues.set(AetheriumItems.VOIDMASS_AXE, gems.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
+        AethValues.set(AetheriumItems.VOIDMASS_PICKAXE, gems.multiply(3).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
+        AethValues.set(AetheriumItems.VOIDMASS_SHOVEL, gems.multiply(1).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
+        AethValues.set(AetheriumItems.VOIDMASS_SPEAR, gems.multiply(1).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
+        AethValues.set(AetheriumItems.VOIDMASS_HOE, gems.multiply(2).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
+        AethValues.set(AetheriumItems.VOIDMASS_SWORD, gems.multiply(2).add(plankBase.divide(2)).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
+
+        AethValues.exclude(AetheriumItems.AETHERIUM_DUST);
+        AethValues.set(AetheriumItems.AETHERIUM_DUST, Aeth.ofDecimalString("0.001"));
+        AethValues.set(AetheriumItems.AETHERIUM_CRYSTAL, Aeth.ofUnits(1));
+        AethValues.exclude(AetheriumItems.AETHERIUM_CRYSTAL);
+        AethValues.set(AetheriumItems.AETHERIUM_INGOT, Aeth.ofUnits(1000));
+        AethValues.exclude(AetheriumItems.AETHERIUM_INGOT);
+        AethValues.set(AetheriumItems.AETHERIUM_BLOCK, Aeth.ofUnits(1000000)); // 1 million
+        AethValues.exclude(AetheriumItems.AETHERIUM_BLOCK);
     }
 }
