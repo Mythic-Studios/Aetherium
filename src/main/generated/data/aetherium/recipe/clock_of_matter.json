@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "aetherium",
+  "key": {
+    "b": "#aetherium:clock_mode_recipe",
+    "e": "minecraft:clock",
+    "v": "aetherium:compressed_voidmass"
+  },
+  "pattern": [
+    "bvb",
+    "vev",
+    "bvb"
+  ],
+  "result": {
+    "id": "aetherium:clock_of_matter"
+  }
+}

@@ -95,6 +95,17 @@ public class AetheriumRecipeProvider extends FabricRecipeProvider {
                     .group("aetherium")
                     .save(output);
 
+            shaped(RecipeCategory.MISC, AetheriumItems.CLOCK_OF_MATTER)
+                    .pattern("bvb")
+                    .pattern("vev")
+                    .pattern("bvb")
+                    .define('b', AetheriumItemTags.CLOCK_MODE_RECIPE)
+                    .define('e', Items.CLOCK)
+                    .define('v', AetheriumItems.COMPRESSED_VOIDMASS)
+                    .unlockedBy(getHasName(AetheriumItems.COMPRESSED_VOIDMASS), has(AetheriumItems.COMPRESSED_VOIDMASS))
+                    .group("aetherium")
+                    .save(output);
+
             templateSmithing(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, Items.NETHERITE_SWORD,
                     AetheriumItemTags.REPAIRS_VOIDMASS, RecipeCategory.COMBAT, AetheriumItems.VOIDMASS_SWORD);
 

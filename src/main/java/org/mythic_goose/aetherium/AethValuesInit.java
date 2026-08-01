@@ -209,6 +209,8 @@ public class AethValuesInit {
         AethValues.set(Items.COPPER_TORCH, coalBase.add(plankBase.divide(2)).add(goldCopperBase.divide(9)).divide(4));
         AethValues.set(Items.GOLD_NUGGET, goldCopperBase.divide(9));
 
+        AethValues.set(Items.CLOCK, goldCopperBase.multiply(4).add(redstoneBase));
+
         AethValues.set(Items.GOLDEN_DANDELION, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.003").multiply(2))));
         AethValues.set(Items.GOLDEN_CARROT, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier)));
         AethValues.set(Items.GLISTERING_MELON_SLICE, goldCopperBase.divide(9).multiply(8).add(naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier)));
@@ -370,6 +372,8 @@ public class AethValuesInit {
         AethValues.set(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, voidmassBase.multiply(7).add(gems.multiply(2)));
 
         AethValues.set(AetheriumItems.VOID_BERRY, voidmassBase.divide(2).subtract(Aeth.ofDecimalString("326")));
+
+        AethValues.set(AetheriumItems.CLOCK_OF_MATTER, voidmassBase.multiply(4).add(goldCopperBase.multiply(4).add(redstoneBase)).add(animalBaseline.add(animalRawMeatAditional).multiply(cookingMeatMultiplierBeef)));
 
         AethValues.set(AetheriumItems.VOIDMASS_HELMET, gems.createHelmet().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
         AethValues.set(AetheriumItems.VOIDMASS_CHESTPLATE, gems.createChestplate().add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));

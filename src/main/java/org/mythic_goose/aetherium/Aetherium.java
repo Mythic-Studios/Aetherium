@@ -15,6 +15,7 @@ import org.mythic_goose.aetherium.init.AetheriumBlocks;
 import org.mythic_goose.aetherium.init.AetheriumItems;
 import org.mythic_goose.aetherium.init.AetheriumMenuTypes;
 import org.mythic_goose.aetherium.network.AetheriumNetworking;
+import org.mythic_goose.aetherium.world.gen.AetheriumWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +37,7 @@ public class Aetherium implements ModInitializer {
 		AethValuesInit.register();
 		AethConfigLoader.load();
 		AetheriumNetworking.registerClock();
+		AetheriumWorldGen.generateModWorldGen();
 
 		AetheriumMenuTypes.registerModMenuTypes();
 
