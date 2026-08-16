@@ -1,0 +1,33 @@
+{
+  "parent": "aetherium:core/ingot_teir",
+  "criteria": {
+    "has_aetherium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:aetherium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.aetherium_block.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "aetherium:aetherium_block"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.aetherium_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_aetherium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

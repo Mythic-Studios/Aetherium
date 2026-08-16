@@ -15,6 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.mythic_goose.aetherium.component.CapsuleType;
 import org.mythic_goose.aetherium.component.ModDataComponents;
+import org.mythic_goose.aetherium.init.AetheriumBlocks;
 
 import java.util.function.Consumer;
 
@@ -30,10 +31,6 @@ public class CapsuleItem extends Item {
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
 
-        if (!level.getBlockState(context.getClickedPos()).is(Blocks.BEDROCK)) {
-            return InteractionResult.PASS;
-        }
-
         if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
@@ -47,11 +44,22 @@ public class CapsuleItem extends Item {
         Player player = context.getPlayer();
 
         if (charge >= MAX_CHARGE) {
-            ItemStack fullCapsule = new ItemStack(CapsuleType.VOIDMASS.getFullCapsuleItem());
-            stack.shrink(1);
+            ItemStack fullCapsule = null;
 
-            if (player != null && !player.getInventory().add(fullCapsule)) {
-                player.drop(fullCapsule, false);
+            if (level.getBlockState(context.getClickedPos()).is(Blocks.BEDROCK)) {
+                 fullCapsule = new ItemStack(CapsuleType.VOIDMASS.getFullCapsuleItem());
+                stack.shrink(1);
+            }
+            if (level.getBlockState(context.getClickedPos()).is(AetheriumBlocks.CRACKED_END_STONE)) {
+                fullCapsule = new ItemStack(CapsuleType.ASTRAL.getFullCapsuleItem());
+                stack.shrink(1);
+            }
+
+            if (player != null) {
+                assert fullCapsule != null;
+                if (!player.getInventory().add(fullCapsule)) {
+                    player.drop(fullCapsule, false);
+                }
             }
         } else {
             stack.set(ModDataComponents.CHARGE, charge);

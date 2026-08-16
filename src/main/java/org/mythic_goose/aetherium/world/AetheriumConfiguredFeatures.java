@@ -16,12 +16,16 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import org.mythic_goose.aetherium.Aetherium;
 import org.mythic_goose.aetherium.init.AetheriumBlocks;
+
+import java.util.List;
 
 public class AetheriumConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> VOID_BERRY_BUSH_KEY = registerKey("void_berry_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ASTRAL_ORES_KEY = registerKey("astral_ores");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -36,6 +40,10 @@ public class AetheriumConfiguredFeatures {
                                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)
                         ))));
 
+        List<OreConfiguration.TargetBlockState> astralOreTargets = List.of(
+                OreConfiguration.target(new BlockMatchTest(AetheriumBlocks.CAVERN_ROCK), AetheriumBlocks.CAVERN_ROCK_ASTRAL_ORE.defaultBlockState()));
+
+        register(context, ASTRAL_ORES_KEY, Feature.ORE, new OreConfiguration(astralOreTargets, 12));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

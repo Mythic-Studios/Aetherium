@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "aetherium:items/growth_clock"
+    "model": "aetherium:item/growth_clock"
   }
 }

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "aetherium:items/speedy_whites_clock"
+    "model": "aetherium:item/speedy_whites_clock"
   }
 }

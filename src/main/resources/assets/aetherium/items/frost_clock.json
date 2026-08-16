@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "aetherium:items/frost_clock"
+    "model": "aetherium:item/frost_clock"
   }
 }

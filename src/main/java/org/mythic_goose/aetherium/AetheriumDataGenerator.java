@@ -21,6 +21,8 @@ public class AetheriumDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(AetheriumRecipeProvider::new);
 		pack.addProvider(AetheriumEquipmentAssetProvider::new);
 		pack.addProvider(AetheriumRegistryDataProvider::new);
+		pack.addProvider(AetheriumAdvancements::new);
+		pack.addProvider(AetheriumEntityLootTableProvider::new);
 
 	}
 

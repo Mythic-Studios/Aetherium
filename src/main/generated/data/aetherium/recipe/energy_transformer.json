@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": "aetherium:aetherium_charged_amethyst",
+    "b": "minecraft:iron_block",
+    "g": "minecraft:gold_block"
+  },
+  "pattern": [
+    "bgb",
+    "gag",
+    "bgb"
+  ],
+  "result": {
+    "id": "aetherium:energy_transformer"
+  }
+}

@@ -27,7 +27,6 @@ public final class AetheriumItemTags {
      * You can use but it won't have any support for values
      */
     public static final TagKey<Item> REPAIRS_VOIDMASS = register("repairs_voidmass");
-    public static final TagKey<Item> CLOCK_MODE_RECIPE = register("clock_mode_recipe");
 
 
     private static TagKey<Item> register(String tagId) {

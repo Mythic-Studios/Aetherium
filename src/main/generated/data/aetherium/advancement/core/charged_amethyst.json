@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/root",
+  "criteria": {
+    "has_charged_amethyst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:aetherium_charged_amethyst"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.charged.description"
+    },
+    "icon": {
+      "id": "aetherium:aetherium_charged_amethyst"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.charged.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_charged_amethyst"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

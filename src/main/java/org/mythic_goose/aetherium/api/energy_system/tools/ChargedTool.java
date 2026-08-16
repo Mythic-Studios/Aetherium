@@ -4,6 +4,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,6 +18,10 @@ public interface ChargedTool {
 
     default boolean hasCharge(ItemStack stack) {
         return ChargeUtil.get(stack) > 0;
+    }
+
+    default void drainSeparate(ItemStack stack) {
+        ChargeUtil.drain(stack, chargePerUse());
     }
 
     default boolean chargedIsCorrectToolForDrops(ItemStack stack) {

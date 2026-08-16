@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/shine_bright",
+  "criteria": {
+    "has_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:summoning_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.summoning_gem.description"
+    },
+    "icon": {
+      "id": "aetherium:summoning_gem"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.summoning_gem.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_gem"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -2,14 +2,33 @@
   "type": "minecraft:crafting_shaped",
   "group": "aetherium",
   "key": {
-    "b": "#aetherium:clock_mode_recipe",
+    "b": "minecraft:cooked_beef",
     "e": "minecraft:clock",
+    "m": "minecraft:bone_meal",
+    "r": {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:regeneration"
+        }
+      }
+    },
+    "s": {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:swiftness"
+        }
+      }
+    },
     "v": "aetherium:compressed_voidmass"
   },
   "pattern": [
-    "bvb",
+    "bvm",
     "vev",
-    "bvb"
+    "svr"
   ],
   "result": {
     "id": "aetherium:clock_of_matter"

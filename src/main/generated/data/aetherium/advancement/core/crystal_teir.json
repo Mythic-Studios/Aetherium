@@ -1,0 +1,34 @@
+{
+  "parent": "aetherium:core/root",
+  "criteria": {
+    "has_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:aetherium_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.aetherium_core.crystal_aetherium.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "aetherium:aetherium_crystal"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.crystal_aetherium.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crystal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

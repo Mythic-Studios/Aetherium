@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_astral_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aetherium:astral_shard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_astral_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aetherium:astral_shard"
+    ]
+  }
+}

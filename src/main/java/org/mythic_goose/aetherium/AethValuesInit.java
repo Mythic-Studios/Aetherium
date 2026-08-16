@@ -366,6 +366,11 @@ public class AethValuesInit {
         AethValues.set(AetheriumItems.EMPTY_CAPSULE, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8").multiply(4)));
         AethValues.set(AetheriumItems.CAPSULE_FRAGMENT, Aeth.ofDecimalString("106.004").add(glass.multiply(4)).add(Aeth.ofDecimalString("190.8")));
 
+        AethValues.set(AetheriumItems.ENERGY_TRANSFORMER, Aeth.ofDecimalString("106.004").add(ironBase.multiply(9).multiply(4)).add(goldCopperBase.multiply(4)));
+
+        AethValues.set(AetheriumItems.CRYSTALLIZED_GRASS_BLOCK, naturalBase);
+        AethValues.set(AetheriumItems.CRYSTALLIZED_DIRT, naturalBase);
+
         Aeth voidmassBase = Aeth.ofDecimalString("1250.568");
         AethValues.set(AetheriumItems.COMPRESSED_VOIDMASS, voidmassBase);
         AethValues.set(AetheriumItems.VOIDMASS_BLOCK, voidmassBase.multiply(9));
@@ -387,6 +392,14 @@ public class AethValuesInit {
         AethValues.set(AetheriumItems.VOIDMASS_HOE, gems.multiply(2).add(plankBase.divide(2)).add(plankBase.divide(2).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase)));
         AethValues.set(AetheriumItems.VOIDMASS_SWORD, gems.multiply(2).add(plankBase.divide(2)).add(Aeth.ofDecimalString("210.01")).add(Aeth.ofDecimalString("190.8")).add(voidmassBase.multiply(7).add(gems.multiply(2))).add(voidmassBase));
 
+        Aeth astralBase = Aeth.ofDecimalString("12505.681");
+        AethValues.set(AetheriumItems.ASTRAL_FRAGMENTS, astralBase.divide(4));
+        AethValues.set(AetheriumItems.ASTRAL_SHARD, astralBase);
+        AethValues.set(AetheriumItems.ASTRAL_STAR, astralBase.divide(2).add(Aeth.ofUnits(6800)));
+        AethValues.set(AetheriumItems.SUMMONING_GEM, astralBase.multiply(8).add(astralBase.divide(2).add(Aeth.ofUnits(6800))));
+
+        AethValues.set(AetheriumItems.ANTIMATTER_DISC, astralBase.multiply(2).add(voidmassBase.multiply(9).multiply(2)));
+
         AethValues.exclude(AetheriumItems.AETHERIUM_DUST);
         AethValues.set(AetheriumItems.AETHERIUM_DUST, Aeth.ofDecimalString("0.001"));
         AethValues.set(AetheriumItems.AETHERIUM_CRYSTAL, Aeth.ofUnits(1));
@@ -395,5 +408,7 @@ public class AethValuesInit {
         AethValues.exclude(AetheriumItems.AETHERIUM_INGOT);
         AethValues.set(AetheriumItems.AETHERIUM_BLOCK, Aeth.ofUnits(1000000)); // 1 million
         AethValues.exclude(AetheriumItems.AETHERIUM_BLOCK);
+        AethValues.set(AetheriumItems.COMPRESS_AETHERIUM_BLOCK, Aeth.ofUnits(1000000000)); // 1 billion
+        AethValues.exclude(AetheriumItems.COMPRESS_AETHERIUM_BLOCK);
     }
 }

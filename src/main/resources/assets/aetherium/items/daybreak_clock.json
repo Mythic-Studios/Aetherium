@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "aetherium:items/daybreak_clock"
+    "model": "aetherium:item/daybreak_clock"
   }
 }

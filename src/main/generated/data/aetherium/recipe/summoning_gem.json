@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": "aetherium:astral_star",
+    "s": "aetherium:astral_shard"
+  },
+  "pattern": [
+    "sss",
+    "sas",
+    "sss"
+  ],
+  "result": {
+    "id": "aetherium:summoning_gem"
+  }
+}

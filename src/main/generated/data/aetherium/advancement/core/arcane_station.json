@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/charged_amethyst",
+  "criteria": {
+    "has_arcane_station": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:arcane_station"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.physical_table.description"
+    },
+    "icon": {
+      "id": "aetherium:arcane_station"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.physical_table.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_arcane_station"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

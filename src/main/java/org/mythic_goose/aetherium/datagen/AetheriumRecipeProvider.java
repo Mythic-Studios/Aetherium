@@ -2,19 +2,26 @@ package org.mythic_goose.aetherium.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jspecify.annotations.NonNull;
 import org.mythic_goose.aetherium.init.AetheriumItems;
 import org.mythic_goose.aetherium.util.AetheriumItemTags;
 
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 public class AetheriumRecipeProvider extends FabricRecipeProvider {
@@ -38,6 +45,15 @@ public class AetheriumRecipeProvider extends FabricRecipeProvider {
         public UniqueRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
             super(registries, output);
         }
+
+        Ingredient swiftnessPotion = DefaultCustomIngredients.components(
+                Ingredient.of(Items.POTION),
+                builder -> builder.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.SWIFTNESS))
+        );
+        Ingredient regenPotion = DefaultCustomIngredients.components(
+                Ingredient.of(Items.POTION),
+                builder -> builder.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.REGENERATION))
+        );
 
         @Override
         public void buildRecipes() {
@@ -96,15 +112,60 @@ public class AetheriumRecipeProvider extends FabricRecipeProvider {
                     .save(output);
 
             shaped(RecipeCategory.MISC, AetheriumItems.CLOCK_OF_MATTER)
-                    .pattern("bvb")
+                    .pattern("bvm")
                     .pattern("vev")
-                    .pattern("bvb")
-                    .define('b', AetheriumItemTags.CLOCK_MODE_RECIPE)
+                    .pattern("svr")
+                    .define('b', Items.COOKED_BEEF)
+                    .define('m', Items.BONE_MEAL)
+                    .define('s', swiftnessPotion)
+                    .define('r', regenPotion)
                     .define('e', Items.CLOCK)
                     .define('v', AetheriumItems.COMPRESSED_VOIDMASS)
                     .unlockedBy(getHasName(AetheriumItems.COMPRESSED_VOIDMASS), has(AetheriumItems.COMPRESSED_VOIDMASS))
                     .group("aetherium")
                     .save(output);
+
+            shaped(RecipeCategory.MISC, AetheriumItems.ASTRAL_SHARD, 1)
+                    .pattern("ff")
+                    .pattern("ff")
+                    .define('f', AetheriumItems.ASTRAL_FRAGMENTS)
+                    .unlockedBy(getHasName(AetheriumItems.ASTRAL_FRAGMENTS), has(AetheriumItems.ASTRAL_FRAGMENTS))
+                    .group("aetherium")
+                    .save(output);
+
+            shaped(RecipeCategory.MISC, AetheriumItems.ANTIMATTER_DISC)
+                    .pattern("va")
+                    .pattern("av")
+                    .define('v', AetheriumItems.VOIDMASS_BLOCK)
+                    .define('a', AetheriumItems.ASTRAL_SHARD)
+                    .unlockedBy(getHasName(AetheriumItems.ASTRAL_SHARD), has(AetheriumItems.ASTRAL_SHARD))
+                    .group("aetherium")
+                    .save(output)
+            ;
+
+            shaped(RecipeCategory.MISC, AetheriumItems.ENERGY_TRANSFORMER)
+                    .pattern("bgb")
+                    .pattern("gag")
+                    .pattern("bgb")
+                    .define('b', Items.IRON_BLOCK)
+                    .define('g', Items.GOLD_BLOCK)
+                    .define('a', AetheriumItems.AETHERIUM_CHARGED_AMETHYST)
+                    .unlockedBy(getHasName(AetheriumItems.AETHERIUM_CHARGED_AMETHYST), has(AetheriumItems.AETHERIUM_CHARGED_AMETHYST))
+                    .save(output)
+            ;
+
+            shaped(RecipeCategory.MISC, AetheriumItems.SUMMONING_GEM)
+                    .pattern("sss")
+                    .pattern("sas")
+                    .pattern("sss")
+                    .define('s', AetheriumItems.ASTRAL_SHARD)
+                    .define('a', AetheriumItems.ASTRAL_STAR)
+                    .unlockedBy(getHasName(AetheriumItems.ASTRAL_STAR), has(AetheriumItems.ASTRAL_STAR))
+                    .unlockedBy(getHasName(AetheriumItems.ASTRAL_SHARD), has(AetheriumItems.ASTRAL_SHARD))
+                    .save(output)
+            ;
+
+
 
             templateSmithing(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, Items.NETHERITE_SWORD,
                     AetheriumItemTags.REPAIRS_VOIDMASS, RecipeCategory.COMBAT, AetheriumItems.VOIDMASS_SWORD);
@@ -123,6 +184,9 @@ public class AetheriumRecipeProvider extends FabricRecipeProvider {
 
             templateSmithing(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, Items.NETHERITE_SPEAR,
                     AetheriumItemTags.REPAIRS_VOIDMASS, RecipeCategory.COMBAT, AetheriumItems.VOIDMASS_SPEAR);
+
+            templateSmithing(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, Items.DIAMOND,
+                    AetheriumItemTags.REPAIRS_VOIDMASS, RecipeCategory.COMBAT, AetheriumItems.VOIDMASS_CHISEL);
 
             templateSmithing(AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE, Items.NETHERITE_HELMET,
                     AetheriumItemTags.REPAIRS_VOIDMASS, RecipeCategory.COMBAT, AetheriumItems.VOIDMASS_HELMET);

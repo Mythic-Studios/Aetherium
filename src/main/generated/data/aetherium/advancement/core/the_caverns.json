@@ -1,0 +1,28 @@
+{
+  "parent": "aetherium:core/astral",
+  "criteria": {
+    "in_caverns": {
+      "conditions": {
+        "to": "aetherium:the_caverns"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.the_caverns.description"
+    },
+    "icon": {
+      "id": "aetherium:energy_transformer"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.the_caverns.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_caverns"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

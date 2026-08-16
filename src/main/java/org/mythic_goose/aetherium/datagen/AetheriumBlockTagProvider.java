@@ -34,12 +34,28 @@ public class AetheriumBlockTagProvider extends FabricTagsProvider.BlockTagsProvi
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.VOIDMASS_BLOCK))
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.ARCANE_STATION))
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.AETHERIUM_BLOCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.COMPRESSED_AETHERIUM_BLOCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.ENERGY_TRANSFORMER))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CAVERN_ROCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CAVERN_ROCK_ASTRAL_ORE))
+        ;
+
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CRYSTALLIZED_GRASS_BLOCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CRYSTALLIZED_DIRT))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.ROTTING_DIRT))
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.VOIDMASS_BLOCK))
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.ARCANE_STATION))
                 .add(AetheriumBlocks.getRK(AetheriumBlocks.AETHERIUM_BLOCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.COMPRESSED_AETHERIUM_BLOCK))
+        ;
+
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CAVERN_ROCK))
+                .add(AetheriumBlocks.getRK(AetheriumBlocks.CAVERN_ROCK_ASTRAL_ORE))
         ;
     }
 }

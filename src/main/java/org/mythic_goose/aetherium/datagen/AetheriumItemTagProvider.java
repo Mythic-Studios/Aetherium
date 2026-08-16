@@ -59,12 +59,6 @@ public class AetheriumItemTagProvider extends FabricTagsProvider.ItemTagsProvide
         tag(AetheriumItemTags.REPAIRS_VOIDMASS)
                 .add(AetheriumItems.getRK(AetheriumItems.COMPRESSED_VOIDMASS));
 
-        tag(AetheriumItemTags.CLOCK_MODE_RECIPE)
-                .add(ItemIds.BONE_MEAL)
-                .add(ItemIds.COOKED_BEEF)
-                .add(ItemIds.POTION)
-                .add(ItemIds.TURTLE_HELMET)
-        ;
 
         tag(ItemTags.AXES)
                 .add(AetheriumItems.getRK(AetheriumItems.VOIDMASS_AXE))

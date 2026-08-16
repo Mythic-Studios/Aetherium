@@ -3,6 +3,7 @@
   "package": "org.mythic_goose.aetherium.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "AttributesMixin",
     "ContainerMixin",
     "CreativeModeTabMixin",
     "DataComponentsMixin",
@@ -16,8 +17,10 @@
     "requireAnnotations": true
   },
   "client": [
+    "BossHealthOverlayMixin",
     "CreativeModeInventoryScreenMixin",
     "ItemPickerMenuMixin",
+    "accessor.BossHealthOverlayAccessor",
     "accessor.CreativeModeInventoryScreenAccessor"
-	]
+  ]
 }

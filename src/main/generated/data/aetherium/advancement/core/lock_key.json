@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/astral_dungeon",
+  "criteria": {
+    "has_lock_key": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_key"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.lock_key.description"
+    },
+    "icon": {
+      "id": "aetherium:astral_key"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.lock_key.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_lock_key"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

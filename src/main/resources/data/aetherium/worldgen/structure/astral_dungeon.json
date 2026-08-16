@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:jigsaw",
+  "start_pool": "aetherium:astral_dungeon/start_pool",
+  "size": 20,
+  "max_distance_from_center": 100,
+  "biomes": "#aetherium:has_structure/astral_dungeon_biomes",
+  "step": "surface_structures",
+  "terrain_adaptation": "bury",
+  "start_height": {
+    "absolute": -45
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "use_expansion_hack": false,
+  "liquid_settings": "apply_waterlogging",
+  "spawn_overrides": {},
+  "pool_aliases": []
+}
