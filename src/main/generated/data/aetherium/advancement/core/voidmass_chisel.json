@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/voidmass",
+  "criteria": {
+    "has_chisel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:voidmass_chisel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.voidmass_chisel.description"
+    },
+    "icon": {
+      "id": "aetherium:voidmass_chisel"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.voidmass_chisel.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_chisel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

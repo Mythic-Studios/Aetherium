@@ -1,7 +1,6 @@
 // 26.2	-999999999-01-01T00:00:00	Aetherium/Tags for minecraft:item
 da9c22051529bcdd9260f6ee4482e8fbace1a72c data/aetherium/tags/item/bricks_slabs_items.json
 6b5a097007a2921682d3822d9c976293afad3a52 data/aetherium/tags/item/chiseled_stone_items.json
-85ce70c328724466661f2c3829a80f5b8837e141 data/aetherium/tags/item/clock_mode_recipe.json
 4afdd908dd970b790105b8f676e965dae5e1aee8 data/aetherium/tags/item/from_smooth_items.json
 daee0e3b76b257c6424aeb3fde885a2bff6b4320 data/aetherium/tags/item/repairs_voidmass.json
 2d0b70a73d21ed2a2e58a27546b5277c057e880e data/aetherium/tags/item/smooth_stone_items.json

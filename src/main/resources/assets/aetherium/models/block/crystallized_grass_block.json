@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "particle": "aetherium:block/crystallized_dirt",
+        "bottom": "aetherium:block/crystallized_dirt",
+        "top": "aetherium:block/crystallized_grass_block_top",
+        "side": "aetherium:block/crystallized_grass_block_side"
+    }
+}

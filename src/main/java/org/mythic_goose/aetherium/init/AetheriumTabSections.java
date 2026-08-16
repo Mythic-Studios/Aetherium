@@ -18,13 +18,24 @@ public class AetheriumTabSections {
                         0xFFffc81f,   // ARGB banner background
                         0xFF777777,
                         List.of(
-                                AetheriumItems.VOID_BERRY,
-                                AetheriumItems.CLOCK_OF_MATTER,
-
-                                AetheriumItems.VOIDMASS_HELMET,
-                                AetheriumItems.VOIDMASS_CHESTPLATE,
-                                AetheriumItems.VOIDMASS_LEGGINGS,
-                                AetheriumItems.VOIDMASS_BOOTS
+                                AetheriumItems.VOIDMASS_CHISEL,
+                                AetheriumItems.CRACKED_END_STONE,
+                                AetheriumItems.ASTRAL_KEY,
+                                AetheriumItems.ASTRAL_FRAGMENTS,
+                                AetheriumItems.ASTRAL_SHARD,
+                                AetheriumItems.FULL_CAPSULE_ASTRAL,
+                                AetheriumItems.CRYSTALLIZED_DIRT,
+                                AetheriumItems.CRYSTALLIZED_GRASS_BLOCK,
+                                AetheriumItems.ENERGY_TRANSFORMER,
+                                AetheriumItems.ANTIMATTER_DISC,
+                                AetheriumItems.ASTRAL_BRICKS,
+                                AetheriumItems.ASTRAL_DOOR,
+                                AetheriumItems.SUMMONING_STONE,
+                                AetheriumItems.ULTIMATIUM_STONE,
+                                AetheriumItems.SUMMONING_GEM,
+                                AetheriumItems.ASTRAL_UPGRADE_TEMPLATE,
+                                AetheriumItems.ASTRAL_LAMP,
+                                AetheriumItems.ASTRAL_STAR
                         )
                 ),
                 new SectionColored(
@@ -36,18 +47,24 @@ public class AetheriumTabSections {
                                 AetheriumItems.ARCANE_STATION,
                                 AetheriumItems.AETHERIUM_CHARGED_AMETHYST,
                                 AetheriumItems.TOME_OF_ARCANA,
+                                AetheriumItems.EMPTY_CAPSULE,
+                                AetheriumItems.CAPSULE_FRAGMENT,
+                                AetheriumItems.FULL_CAPSULE_VOIDMASS,
                                 AetheriumItems.COMPRESSED_VOIDMASS,
                                 AetheriumItems.VOIDMASS_BLOCK,
+                                AetheriumItems.VOIDMASS_HELMET,
+                                AetheriumItems.VOIDMASS_CHESTPLATE,
+                                AetheriumItems.VOIDMASS_LEGGINGS,
+                                AetheriumItems.VOIDMASS_BOOTS,
                                 AetheriumItems.VOIDMASS_SWORD,
                                 AetheriumItems.VOIDMASS_AXE,
                                 AetheriumItems.VOIDMASS_PICKAXE,
                                 AetheriumItems.VOIDMASS_SPEAR,
                                 AetheriumItems.VOIDMASS_SHOVEL,
                                 AetheriumItems.VOIDMASS_HOE,
-                                AetheriumItems.EMPTY_CAPSULE,
-                                AetheriumItems.CAPSULE_FRAGMENT,
-                                AetheriumItems.FULL_CAPSULE_VOIDMASS,
-                                AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE
+                                AetheriumItems.VOIDMASS_UPGRADE_TEMPLATE,
+                                AetheriumItems.CLOCK_OF_MATTER,
+                                AetheriumItems.VOID_BERRY
                         )
                 ),
                 new SectionColored(
@@ -59,15 +76,16 @@ public class AetheriumTabSections {
                             AetheriumItems.AETHERIUM_DUST,
                             AetheriumItems.AETHERIUM_CRYSTAL,
                             AetheriumItems.AETHERIUM_INGOT,
-                            AetheriumItems.AETHERIUM_BLOCK
+                            AetheriumItems.AETHERIUM_BLOCK,
+                            AetheriumItems.COMPRESS_AETHERIUM_BLOCK
                         )
                 )
 
 
 //              Example of a textured section
 //                SectionTextured.of(
-//                        MSGWOFT.MOD_ID, "name",
-//                        Component.translatable("itemgroup.msgwoft.name"),
+//                        MOD_ID, "name",
+//                        Component.translatable("itemgroup.mod_id.name"),
 //                        0xFFFFAAAA,
 //                        List.of(
 //

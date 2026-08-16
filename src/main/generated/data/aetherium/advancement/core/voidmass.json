@@ -1,0 +1,45 @@
+{
+  "parent": "aetherium:core/capsule",
+  "criteria": {
+    "has_capsule": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:full_capsule_voidmass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_voidmass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:compressed_voidmass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.voidmass_capsule.description"
+    },
+    "icon": {
+      "id": "aetherium:compressed_voidmass"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.voidmass_capsule.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_capsule"
+    ],
+    [
+      "has_voidmass"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

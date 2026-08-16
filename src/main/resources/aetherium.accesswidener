@@ -1,2 +1,4 @@
 accessWidener v2 official
 accessible field net/minecraft/server/level/ServerPlayer server Lnet/minecraft/server/MinecraftServer;
+accessible method net/minecraft/world/level/block/DoublePlantBlock preventDropFromBottomPart (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/player/Player;)V
+accessible method net/minecraft/world/level/block/DoorBlock playSound (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)V

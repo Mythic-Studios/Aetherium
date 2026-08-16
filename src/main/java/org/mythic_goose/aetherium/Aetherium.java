@@ -3,6 +3,8 @@ package org.mythic_goose.aetherium;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -10,10 +12,8 @@ import org.mythic_goose.aetherium.api.*;
 import org.mythic_goose.aetherium.api.energy_system.armor.ChargedArmorItem;
 import org.mythic_goose.aetherium.component.ModDataComponents;
 import org.mythic_goose.aetherium.creative_tab.ModCreativeTabs;
-import org.mythic_goose.aetherium.init.AetheriumBlockEntities;
-import org.mythic_goose.aetherium.init.AetheriumBlocks;
-import org.mythic_goose.aetherium.init.AetheriumItems;
-import org.mythic_goose.aetherium.init.AetheriumMenuTypes;
+import org.mythic_goose.aetherium.entity.AstralexBoss;
+import org.mythic_goose.aetherium.init.*;
 import org.mythic_goose.aetherium.network.AetheriumNetworking;
 import org.mythic_goose.aetherium.world.gen.AetheriumWorldGen;
 import org.slf4j.Logger;
@@ -30,6 +30,7 @@ public class Aetherium implements ModInitializer {
 		AetheriumBlocks.init();
 		AetheriumItems.init();
 		AetheriumBlockEntities.register();
+		AetheriumEntities.registerAetheriumEntities();
 
 		ModDataComponents.init();
 		AetheriumAttachments.register();
@@ -52,6 +53,14 @@ public class Aetherium implements ModInitializer {
 				}
 			}
 		});
+
+		ServerPlayConnectionEvents.DISCONNECT.register((handler, server) ->
+				AstralexBoss.removePlayerFromAll(handler.getPlayer()));
+
+		FabricDefaultAttributeRegistry.register(
+				AetheriumEntities.ASTRALEX_BOSS,
+				AstralexBoss.createAttributes()
+		);
 	}
 
 	public static Identifier id(String path) {

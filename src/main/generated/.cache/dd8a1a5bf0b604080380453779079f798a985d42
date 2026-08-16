@@ -1,4 +1,6 @@
 // 26.2	-999999999-01-01T00:00:00	Aetherium/Tags for minecraft:block
 258c869c398061d556f853f87cde628fc1ab887e data/aetherium/tags/block/speedy_blocks.json
-158940d2b5a962dd3178a9db38e082dde8b1bac2 data/minecraft/tags/block/mineable/pickaxe.json
-158940d2b5a962dd3178a9db38e082dde8b1bac2 data/minecraft/tags/block/needs_stone_tool.json
+4aedbaf37cd13d0c62d0a1dcb99c37a31f161505 data/minecraft/tags/block/mineable/pickaxe.json
+56b0220204ecef8768f2e7fc573c9ddeb11d0961 data/minecraft/tags/block/mineable/shovel.json
+aa0b62398ac0f0ca7f90fef4c01897891f6ee5ac data/minecraft/tags/block/needs_diamond_tool.json
+80a15fd771e117c987c21bfb4b9bd01aded3b68f data/minecraft/tags/block/needs_stone_tool.json

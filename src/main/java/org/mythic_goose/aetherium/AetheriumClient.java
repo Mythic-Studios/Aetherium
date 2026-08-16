@@ -7,17 +7,22 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import org.lwjgl.glfw.GLFW;
 import org.mythic_goose.aetherium.api.AethTooltips;
 import org.mythic_goose.aetherium.api.energy_system.tools.ChargedTool;
 import org.mythic_goose.aetherium.client.AethHud;
+import org.mythic_goose.aetherium.client.AstralexBossTracker;
+import org.mythic_goose.aetherium.entity.AstralexRenderer;
+import org.mythic_goose.aetherium.init.AetheriumEntities;
 import org.mythic_goose.aetherium.init.AetheriumMenuTypes;
 import org.mythic_goose.aetherium.item.ClockOfMatterItem;
 import org.mythic_goose.aetherium.menu.ArcaneStationScreen;
 import org.mythic_goose.aetherium.menu.CurrencyExchangeScreen;
 import org.mythic_goose.aetherium.network.ArmorRechargePayload;
+import org.mythic_goose.aetherium.network.AstralexBossBarPayload;
 import org.mythic_goose.aetherium.network.ClockRechargePayload;
 import org.mythic_goose.aetherium.network.ToolRechargePayload;
 
@@ -33,6 +38,12 @@ public class AetheriumClient implements ClientModInitializer {
 
         MenuScreens.register(AetheriumMenuTypes.ARCANE_STATION_MENU_TYPE, ArcaneStationScreen::new);
         MenuScreens.register(AetheriumMenuTypes.CURRENCY_EXCHANGE_MENU_TYPE, CurrencyExchangeScreen::new);
+
+        AstralexBossBarPayload.register();
+        ClientPlayNetworking.registerGlobalReceiver(AstralexBossBarPayload.TYPE, (payload, context) ->
+                context.client().execute(() -> AstralexBossTracker.setActive(payload.bossId(), payload.active())));
+
+        EntityRenderers.register(AetheriumEntities.ASTRALEX_BOSS, AstralexRenderer::new);
 
         RECHARGE_KEY = new KeyMapping(
                 "key.aetherium.clock_recharge",

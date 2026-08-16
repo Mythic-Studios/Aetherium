@@ -8,11 +8,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 import org.mythic_goose.aetherium.Aetherium;
 
 public record AethTagRegistration<T>(ResourceKey<Registry<T>> registryKey) {
     public static final AethTagRegistration<Item> ITEM_TAG = new AethTagRegistration<>(Registries.ITEM);
     public static final AethTagRegistration<Block> BLOCK_TAG = new AethTagRegistration<>(Registries.BLOCK);
+    public static final AethTagRegistration<Structure> STRUCTURE_TAG = new AethTagRegistration<>(Registries.STRUCTURE);
 
     public TagKey<T> registerAetherium(String tagId) {
         return TagKey.create(registryKey, Identifier.fromNamespaceAndPath(Aetherium.MOD_ID, tagId));

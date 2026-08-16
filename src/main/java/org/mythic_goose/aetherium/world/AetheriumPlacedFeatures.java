@@ -19,6 +19,7 @@ import java.util.List;
 public class AetheriumPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> VOID_BERRY_BUSH_PLACED_KEY = registerKey("void_berry_bush_placed");
+    public static final ResourceKey<PlacedFeature> ASTRAL_ORES_PLACED_KEY = registerKey("astral_ores_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -26,6 +27,10 @@ public class AetheriumPlacedFeatures {
 
         register(context, VOID_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(AetheriumConfiguredFeatures.VOID_BERRY_BUSH_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+        register(context, ASTRAL_ORES_PLACED_KEY, configuredFeatures.getOrThrow(AetheriumConfiguredFeatures.ASTRAL_ORES_KEY),
+                AetheriumOrePlacements.rareOrePlacement(14,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80))));
     }
 
 

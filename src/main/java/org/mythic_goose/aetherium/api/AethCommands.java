@@ -12,7 +12,7 @@ public class AethCommands {
      * There isn't a setting to enable this separately unless you're a mod dev,
      * If so just copy this class
      */
-    private static final boolean enabled = false;
+    private static final boolean enabled = true;
 
     public static void register() {
         if (enabled) {

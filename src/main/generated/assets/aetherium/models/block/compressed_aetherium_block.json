@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aetherium:block/compressed_aetherium_block"
+  }
+}

@@ -8,7 +8,8 @@ import org.mythic_goose.aetherium.init.AetheriumItems;
 import java.util.function.Supplier;
 
 public enum CapsuleType {
-    VOIDMASS("voidmass", () -> AetheriumItems.FULL_CAPSULE_VOIDMASS, () -> AetheriumItems.COMPRESSED_VOIDMASS, 2, 6);
+    VOIDMASS("voidmass", () -> AetheriumItems.FULL_CAPSULE_VOIDMASS, () -> AetheriumItems.COMPRESSED_VOIDMASS, 2, 6),
+    ASTRAL("astral", () -> AetheriumItems.FULL_CAPSULE_ASTRAL, () -> AetheriumItems.ASTRAL_FRAGMENTS, 2, 4);
 
     private final String id;
     private final Supplier<Item> fullCapsuleItem;

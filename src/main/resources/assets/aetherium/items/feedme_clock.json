@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "aetherium:items/feedme_clock"
+    "model": "aetherium:item/feedme_clock"
   }
 }

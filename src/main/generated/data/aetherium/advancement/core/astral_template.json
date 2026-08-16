@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/lock_key",
+  "criteria": {
+    "has_astral_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_upgrade_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.astral_template.description"
+    },
+    "icon": {
+      "id": "aetherium:astral_upgrade_template"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.astral_template.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_astral_template"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

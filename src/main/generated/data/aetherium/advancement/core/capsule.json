@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/charged_amethyst",
+  "criteria": {
+    "has_capsule": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:empty_capsule"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.capsule.description"
+    },
+    "icon": {
+      "id": "aetherium:empty_capsule"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.capsule.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_capsule"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

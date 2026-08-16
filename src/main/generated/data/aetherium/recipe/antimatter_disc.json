@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "aetherium",
+  "key": {
+    "a": "aetherium:astral_shard",
+    "v": "aetherium:voidmass_block"
+  },
+  "pattern": [
+    "va",
+    "av"
+  ],
+  "result": {
+    "id": "aetherium:antimatter_disc"
+  }
+}

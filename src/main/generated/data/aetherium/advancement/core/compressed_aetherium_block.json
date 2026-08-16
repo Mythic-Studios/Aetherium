@@ -1,0 +1,33 @@
+{
+  "parent": "aetherium:core/block_teir",
+  "criteria": {
+    "has_aetherium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:compressed_aetherium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.compressed_aetherium_block.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "aetherium:compressed_aetherium_block"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.compressed_aetherium_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_aetherium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

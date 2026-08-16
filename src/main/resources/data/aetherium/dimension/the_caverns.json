@@ -1,0 +1,36 @@
+{
+  "type": "aetherium:the_caverns",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "aetherium:crystal_cavern",
+          "parameters": {
+            "temperature": -2,
+            "humidity": 0,
+            "continentalness": -2,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "aetherium:envoided_layers",
+          "parameters": {
+            "temperature": 2,
+            "humidity": 1,
+            "continentalness": 2,
+            "erosion": 1,
+            "weirdness": 1,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    },
+    "settings": "aetherium:the_caverns"
+  }
+}

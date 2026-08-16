@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "has_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:aetherium_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "aetherium:gui/advancements/background/aetherium_core",
+    "description": {
+      "translate": "advancements.aetherium_core.root.description"
+    },
+    "icon": {
+      "id": "aetherium:aetherium_dust"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.aetherium_core.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dust"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

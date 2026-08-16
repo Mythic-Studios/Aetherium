@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "aetherium:block/energy_transformer"
+    }
+  }
+}

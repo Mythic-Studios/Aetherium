@@ -1,0 +1,45 @@
+{
+  "parent": "aetherium:core/voidmass_chisel",
+  "criteria": {
+    "has_astral": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_capsule": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:full_capsule_astral"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.astral.description"
+    },
+    "icon": {
+      "id": "aetherium:astral_shard"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.astral.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_capsule"
+    ],
+    [
+      "has_astral"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

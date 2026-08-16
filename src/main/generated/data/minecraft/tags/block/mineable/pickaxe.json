@@ -2,6 +2,10 @@
   "values": [
     "aetherium:voidmass_block",
     "aetherium:arcane_station",
-    "aetherium:aetherium_block"
+    "aetherium:aetherium_block",
+    "aetherium:compressed_aetherium_block",
+    "aetherium:energy_transformer",
+    "aetherium:cavern_rock",
+    "aetherium:cavern_rock_astral_ore"
   ]
 }
