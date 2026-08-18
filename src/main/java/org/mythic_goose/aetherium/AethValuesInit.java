@@ -34,6 +34,7 @@ public class AethValuesInit {
         AethValues.set(Items.SWEET_BERRIES, naturalBase.add(Aeth.ofDecimalString("0.005")));
         AethValues.set(Items.GLOW_BERRIES, naturalBase.add(Aeth.ofDecimalString("0.005")));
         AethValues.set(Items.CHORUS_FRUIT, naturalBase.add(Aeth.ofDecimalString("0.005")).multiply(16));
+        AethValues.set(Items.CHORUS_FLOWER, naturalBase.add(Aeth.ofDecimalString("0.005")).multiply(16));
 
         long growthMultiplier = 6;
         AethValues.set(Items.WHEAT, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier));
@@ -164,6 +165,7 @@ public class AethValuesInit {
         long cookingFoodMultiplier = 3;
         long cookingMeatMultiplier = 8;
         long cookingMeatMultiplierBeef = 16;
+        AethValues.set(Items.POPPED_CHORUS_FRUIT, naturalBase.add(Aeth.ofDecimalString("0.005")).multiply(16).multiply(cookingFoodMultiplier));
         AethValues.set(Items.BAKED_POTATO, naturalBase.add(Aeth.ofDecimalString("0.008")).multiply(growthMultiplier).multiply(cookingFoodMultiplier));
         AethValues.set(Items.CHARCOAL, coalBase.divide(3));
         AethValues.set(Items.COAL, coalBase);

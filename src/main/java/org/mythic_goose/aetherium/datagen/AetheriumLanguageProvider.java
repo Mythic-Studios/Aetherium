@@ -181,6 +181,8 @@ public class AetheriumLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("jei.aetherium.info.antimatter_disc", "Use on an Energy Transformer to warp you to The Caverns. \nAlso it points towards the nearest Astral Dungeon");
         translationBuilder.add("jei.aetherium.info.summon_gem", "Use on Summoning Stones to summon ???");
 
+        translationBuilder.add("toolip.boss_defences.astralex", "In Order per phase: Bows, Anything, Spears");
+
         //Continued
 
         translationBuilder.add(AetheriumBlocks.ENERGY_TRANSFORMER, "Energy Transformer");

@@ -90,7 +90,7 @@ public class AetheriumItems extends ItemRegistry {
 
         ARCANE_STATION = registerBlockItem("arcane_station", AetheriumBlocks.ARCANE_STATION);
 
-        SUMMONING_GEM = registerItem("summoning_gem", Item::new);
+        SUMMONING_GEM = registerItem("summoning_gem", properties ->  new ItemWithTooltip(properties.stacksTo(6), "toolip.boss_defences.astralex"));
 
         CAVERN_ROCK = registerBlockItem("cavern_rock", AetheriumBlocks.CAVERN_ROCK);
         CAVERN_ROCK_ASTRAL_ORE = registerBlockItem("cavern_rock_astral_ore", AetheriumBlocks.CAVERN_ROCK_ASTRAL_ORE);
