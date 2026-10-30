@@ -104,6 +104,6 @@ public class AetheriumBlocks extends BlockRegistry {
 
 
     public static Iterable<Block> getRegisteredBlocks() {
-        return BLOCKS.all().stream().map(RegistryEntry::get)::iterator;
+        return all().stream().map(RegistryEntry::get)::iterator;
     }
 }
