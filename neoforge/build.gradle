@@ -91,7 +91,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.mythic_goose.amalgamation:amalgamation-neoforge-26.2:1.5.5'
+    implementation 'org.mythic_goose.amalgamation:amalgamation-neoforge-26.2:1.6.0'
 
     implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolibVersion}"
 
