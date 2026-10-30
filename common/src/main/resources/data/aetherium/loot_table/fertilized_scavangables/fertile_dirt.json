@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 25,
+          "name": "aetherium:aetherium_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 35,
+          "name": "minecraft:bone_meal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "aetherium:fertile_bone_meal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "aetherium:astral_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "aetherium:astral_fruit",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

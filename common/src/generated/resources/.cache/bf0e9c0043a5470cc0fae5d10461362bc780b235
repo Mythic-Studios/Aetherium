@@ -1,0 +1,25 @@
+// 26.2	2026-10-08T19:47:28.6804029	Tags for minecraft:item mod id aetherium
+da9c22051529bcdd9260f6ee4482e8fbace1a72c data/aetherium/tags/item/bricks_slabs_items.json
+6b5a097007a2921682d3822d9c976293afad3a52 data/aetherium/tags/item/chiseled_stone_items.json
+4afdd908dd970b790105b8f676e965dae5e1aee8 data/aetherium/tags/item/from_smooth_items.json
+987c9d4a08a4670e8226efaef413e558100fc400 data/aetherium/tags/item/refills_fertilizer_strong.json
+5305a8560f5f31e58619df82e0cf0e09a5a2859a data/aetherium/tags/item/refills_fertilizer_weak.json
+31617c79627459705a7281236f0bb3a95366605e data/aetherium/tags/item/repairs_astral.json
+daee0e3b76b257c6424aeb3fde885a2bff6b4320 data/aetherium/tags/item/repairs_voidmass.json
+2d0b70a73d21ed2a2e58a27546b5277c057e880e data/aetherium/tags/item/smooth_stone_items.json
+726d0d30c9dd28cdd65d6c297b8df7299784506e data/aetherium/tags/item/stones_slabs_items.json
+d4f5bdc5799bb0b18dc6cfc7de2278b5c7c1713e data/minecraft/tags/item/axes.json
+597257880bc13715e99b23cad4b31494ec42e91a data/minecraft/tags/item/chest_armor.json
+1c647566b41704fa33d84a91f2a057c3b8993b01 data/minecraft/tags/item/enchantable/bow.json
+597257880bc13715e99b23cad4b31494ec42e91a data/minecraft/tags/item/enchantable/chest_armor.json
+cb02ee30bb9f4552354f6d331c2be54531ae14ff data/minecraft/tags/item/enchantable/foot_armor.json
+04e135a24a5ad0fa18316b51c638d3871e57c880 data/minecraft/tags/item/enchantable/head_armor.json
+8aa645b1ee3eb897f2c2d31e63bf7890b2c06fed data/minecraft/tags/item/enchantable/leg_armor.json
+cb02ee30bb9f4552354f6d331c2be54531ae14ff data/minecraft/tags/item/foot_armor.json
+04e135a24a5ad0fa18316b51c638d3871e57c880 data/minecraft/tags/item/head_armor.json
+58e993e1eeffc8cc9bbd1bc81b3bf6b21470952a data/minecraft/tags/item/hoes.json
+8aa645b1ee3eb897f2c2d31e63bf7890b2c06fed data/minecraft/tags/item/leg_armor.json
+ed4e163bf3c93880b5aa7bfb842bf4c4409f312d data/minecraft/tags/item/pickaxes.json
+e42fcfcd3fba4972342598ab99e57756dc51266e data/minecraft/tags/item/shovels.json
+6d963d0bcc44c3dba0f98b8e9bec51f4b306a955 data/minecraft/tags/item/spears.json
+db78a44708bea3c8b2554cdbd5a32e6d8d18105b data/minecraft/tags/item/swords.json

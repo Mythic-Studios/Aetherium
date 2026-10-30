@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.mythic_goose.aetherium.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AttributesMixin",
+    "DataComponentsMixin",
+    "ClickRechargeMixin",
+    "ItemStackMixin"
+  ],
+  "client": [
+    "BossHealthOverlayMixin",
+    "MixinMinecraft",
+    "accessor.BossHealthOverlayAccessor"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
+

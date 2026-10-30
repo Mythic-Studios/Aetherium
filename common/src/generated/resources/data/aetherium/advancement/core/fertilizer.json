@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/the_caverns",
+  "criteria": {
+    "has_arcane_station": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:fertilizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.fertile.description"
+    },
+    "icon": {
+      "id": "aetherium:fertilizer"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.fertile.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_arcane_station"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

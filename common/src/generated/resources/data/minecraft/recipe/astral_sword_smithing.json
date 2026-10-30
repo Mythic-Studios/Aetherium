@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_astral",
+  "base": "aetherium:voidmass_sword",
+  "result": {
+    "id": "aetherium:astral_sword"
+  },
+  "template": "aetherium:astral_upgrade_template"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_astral",
+  "base": "aetherium:voidmass_helmet",
+  "result": {
+    "id": "aetherium:astral_helmet"
+  },
+  "template": "aetherium:astral_upgrade_template"
+}

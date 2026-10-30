@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:bow",
+  "result": {
+    "id": "aetherium:voidmass_bow"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

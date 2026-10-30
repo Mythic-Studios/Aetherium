@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/fertilizer",
+  "criteria": {
+    "has_arcane_station": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:aetherium_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.aetherium_seed.description"
+    },
+    "icon": {
+      "id": "aetherium:aetherium_seeds"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.aetherium_seed.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_arcane_station"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

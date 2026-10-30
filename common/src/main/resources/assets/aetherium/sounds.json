@@ -1,0 +1,10 @@
+{
+  "medicine_technology_kulakovka": {
+    "sounds": [
+      {
+        "name": "aetherium:medicine_technology_kulakovka",
+        "stream": true
+      }
+    ]
+  }
+}

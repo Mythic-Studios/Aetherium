@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "aetherium:crystal_cavern",
+  "spawners": {
+    "type": "aetherium:cavern_cow",
+    "maxCount": 25,
+    "minCount": 6,
+    "weight": 6
+  }
+}

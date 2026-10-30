@@ -1,0 +1,7 @@
+// 26.2	2026-10-10T17:24:18.7299515	Tags for minecraft:block mod id aetherium
+d5d3fdab0bfcab1550c277f661e048c3685d387d data/aetherium/tags/block/speedy_blocks.json
+4aedbaf37cd13d0c62d0a1dcb99c37a31f161505 data/minecraft/tags/block/mineable/pickaxe.json
+cfcd09423931b47a3b2e1218c56958af7eb332cf data/minecraft/tags/block/mineable/shovel.json
+aa0b62398ac0f0ca7f90fef4c01897891f6ee5ac data/minecraft/tags/block/needs_diamond_tool.json
+80a15fd771e117c987c21bfb4b9bd01aded3b68f data/minecraft/tags/block/needs_stone_tool.json
+fba0b53f351a91be4d3b00d739f9f312ca1ecaa0 data/minecraft/tags/block/valid_spawn.json

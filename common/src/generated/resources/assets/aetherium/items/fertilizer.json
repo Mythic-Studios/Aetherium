@@ -1,0 +1,28 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "component": "aetherium:fertilizer_charge",
+    "default": 12,
+    "entries": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "aetherium:item/fertilizer_empty"
+        },
+        "threshold": 0.0
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "aetherium:item/fertilizer"
+        },
+        "threshold": 1.0
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "aetherium:item/fertilizer"
+    },
+    "property": "aetherium:component_int_property"
+  }
+}

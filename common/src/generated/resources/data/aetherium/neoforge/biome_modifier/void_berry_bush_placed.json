@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:end_barrens",
+    "minecraft:end_highlands",
+    "minecraft:the_end",
+    "minecraft:end_midlands",
+    "minecraft:small_end_islands"
+  ],
+  "features": "aetherium:void_berry_bush_placed",
+  "step": "vegetal_decoration"
+}

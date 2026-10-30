@@ -1,0 +1,42 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "${license}",
+    "icon": "aetherium.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+          "org.mythic_goose.aetherium.Aetherium"
+        ],
+        "client": [
+            "org.mythic_goose.aetherium.AetheriumClient"
+        ],
+        "jei_mod_plugin": [
+            "org.mythic_goose.aetherium.AetheriumJeiPlugin"
+        ]
+    },
+    "mixins": [
+        "aetherium.mixins.json",
+        "aetherium.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  

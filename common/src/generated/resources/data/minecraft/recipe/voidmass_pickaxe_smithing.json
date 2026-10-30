@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_voidmass",
+  "base": "minecraft:diamond_pickaxe",
+  "result": {
+    "id": "aetherium:voidmass_pickaxe"
+  },
+  "template": "aetherium:voidmass_upgrade_template"
+}

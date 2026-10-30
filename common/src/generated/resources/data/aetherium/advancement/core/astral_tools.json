@@ -1,0 +1,111 @@
+{
+  "parent": "aetherium:core/astral_template",
+  "criteria": {
+    "has_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_bow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_spear": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_spear"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:astral_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.astral_tools.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "aetherium:astral_sword"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.astral_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_sword"
+    ],
+    [
+      "has_spear"
+    ],
+    [
+      "has_pickaxe"
+    ],
+    [
+      "has_axe"
+    ],
+    [
+      "has_shovel"
+    ],
+    [
+      "has_hoe"
+    ],
+    [
+      "has_bow"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

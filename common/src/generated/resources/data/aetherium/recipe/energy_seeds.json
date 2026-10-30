@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "o": "aetherium:energy_orb",
+    "s": "aetherium:aetherium_seeds"
+  },
+  "pattern": [
+    " s ",
+    "sos",
+    " s "
+  ],
+  "result": {
+    "count": 4,
+    "id": "aetherium:energy_seeds"
+  }
+}

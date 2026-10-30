@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/energy_orb",
+  "criteria": {
+    "has_arcane_station": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:energy_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.energy_seed.description"
+    },
+    "icon": {
+      "id": "aetherium:energy_seeds"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.energy_seed.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_arcane_station"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

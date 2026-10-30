@@ -1,0 +1,32 @@
+{
+  "parent": "aetherium:core/the_caverns",
+  "criteria": {
+    "has_arcane_station": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aetherium:energy_orb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.aetherium_core.energy_orb.description"
+    },
+    "icon": {
+      "id": "aetherium:energy_orb"
+    },
+    "title": {
+      "translate": "advancements.aetherium_core.energy_orb.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_arcane_station"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

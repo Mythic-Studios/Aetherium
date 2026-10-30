@@ -1,0 +1,73 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    32,
+    32
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        -8.75,
+        0
+      ],
+      "scale": [
+        1,
+        1.5,
+        1.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        -8.75,
+        0
+      ],
+      "scale": [
+        1,
+        1.5,
+        1.5
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        1.25,
+        0.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        1.25,
+        0.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "head": {
+      "rotation": [
+        -149,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        19.75,
+        14
+      ]
+    }
+  },
+  "textures": {
+    "particle": "aetherium:item/ultimatium_sword_in_hand_texture"
+  }
+}

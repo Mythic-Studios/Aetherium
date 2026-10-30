@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_astral",
+  "base": "aetherium:voidmass_boots",
+  "result": {
+    "id": "aetherium:astral_boots"
+  },
+  "template": "aetherium:astral_upgrade_template"
+}

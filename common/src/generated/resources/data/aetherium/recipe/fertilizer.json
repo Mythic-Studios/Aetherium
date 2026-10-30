@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": "minecraft:bone_meal",
+    "s": "aetherium:cavern_hide"
+  },
+  "pattern": [
+    "sas",
+    "sss"
+  ],
+  "result": {
+    "id": "aetherium:fertilizer"
+  }
+}

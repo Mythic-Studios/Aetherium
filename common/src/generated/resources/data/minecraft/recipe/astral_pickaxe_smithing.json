@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#aetherium:repairs_astral",
+  "base": "aetherium:voidmass_pickaxe",
+  "result": {
+    "id": "aetherium:astral_pickaxe"
+  },
+  "template": "aetherium:astral_upgrade_template"
+}
