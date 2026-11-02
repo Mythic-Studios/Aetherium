@@ -17,6 +17,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import org.mythic_goose.aetherium.api.AethConfigLoader;
 import org.mythic_goose.aetherium.api.energy_system.armor.ChargedArmorItem;
 import org.mythic_goose.aetherium.component.ModDataComponents;
 import org.mythic_goose.aetherium.component.NeoForgeDataComponentRegistrar;
@@ -54,6 +55,8 @@ public class Aetherium {
         eventBus.addListener(this::addCreative);
 
         NeoForgeAethValues.init();
+
+        eventBus.addListener((FMLCommonSetupEvent e) -> e.enqueueWork(AethConfigLoader::load));
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

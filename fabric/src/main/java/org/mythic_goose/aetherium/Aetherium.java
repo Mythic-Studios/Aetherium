@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -20,6 +21,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.Heightmap;
+import org.mythic_goose.aetherium.api.AethConfigLoader;
 import org.mythic_goose.aetherium.api.energy_system.armor.ChargedArmorItem;
 import org.mythic_goose.aetherium.component.FabricDataComponentRegistrar;
 import org.mythic_goose.aetherium.component.ModDataComponents;
@@ -56,6 +58,9 @@ public class Aetherium implements ModInitializer {
         FabricBiomeFeatureApplier.applyAll();
 
         FabricAethValues.init();
+
+        ServerLifecycleEvents.SERVER_STARTING.register(server -> AethConfigLoader.load());
+        ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> AethConfigLoader.load());
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(output -> {
             output.accept(AetheriumItems.CAVERN_COW_SPAWN_EGG.get());

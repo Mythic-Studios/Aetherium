@@ -5,7 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.mythic_goose.aetherium.client.AethFormatter;
-import org.mythic_goose.amalgamation.api.tooltip_v1.ItemTooltips;
+import org.mythic_goose.amalgamation.api.tooltip_v2.ItemTooltips;
 
 public class AethTooltips {
     /**

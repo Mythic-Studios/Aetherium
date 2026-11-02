@@ -2,6 +2,7 @@ package org.mythic_goose.aetherium;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -12,6 +13,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import org.lwjgl.glfw.GLFW;
+import org.mythic_goose.aetherium.api.AethConfigLoader;
 import org.mythic_goose.aetherium.api.AethTooltips;
 import org.mythic_goose.aetherium.api.energy_system.energy.ChargedTool;
 import org.mythic_goose.aetherium.api.external.ComponentIntProperty;
@@ -60,6 +62,8 @@ public class AetheriumClient implements ClientModInitializer {
                 GLFW.GLFW_KEY_V,
                 CATEGORY
         );
+
+        ClientLifecycleEvents.CLIENT_STARTED.register(client -> AethConfigLoader.load());
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;

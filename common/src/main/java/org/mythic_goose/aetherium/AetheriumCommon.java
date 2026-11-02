@@ -34,7 +34,6 @@ public class AetheriumCommon {
                 AstralexBossBarPayload.CODEC);
 
         AetheriumAttachments.register();
-        AethConfigLoader.load();
         AethEnchantConfigLoader.load();
         AetheriumWorldGen.generateModWorldGen();
 
